@@ -1,0 +1,16 @@
+<template name="starts">
+  <view class="rankcontauber">  
+  <!-- 模板从这里开始的，每一个view在新家的时候工具会自动加一个classname，这里按自己喜欢修改一下 -->  
+    <view class="rankstars flex-view-item">  
+      <block wx:for="{{[2,4,6,8,10]}}" wx:key="key"  wx:for-item="item">
+        <image wx:if="{{item > starScore+1}}" src="/resources/images/startNull.png"></image>
+        <image wx:elif="{{item==starScore+1}}" src="/resources/images/startMid.png"></image>
+        <image wx:else="{{item<=starScore+1}}" src="/resources/images/startFull.png"></image>
+      </block>  
+    </view>  
+    <view class="flex-view-item">
+      <!-- 右边的成绩，看得出来和上面的星星是左右布局的 -->  
+      <text class="rankscore">{{starScore}}</text>  
+    </view>
+  </view>
+</template>

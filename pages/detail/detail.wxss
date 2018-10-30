@@ -1,0 +1,45 @@
+/* pages/detail/detail.wxss */
+@import "../template/starts.wxss";
+.oilTitle{
+  height: 300rpx;
+  width: 600rpx;
+  background-color: rgb(240, 246, 247);
+  margin-bottom: 10rpx;
+  border-radius:25rpx;
+  padding:30rpx;
+}
+.title{
+  font-size: 30rpx
+}
+.titleTop{
+  display: flex;
+  justify-content:space-between;
+  align-items:center;
+  padding-bottom: 30rpx 
+} 
+.stars{
+  border-top:solid 1rpx;
+  border-color: #fff
+}
+.titleDown{
+  display: flex;
+  justify-content:space-between;
+  align-items:center;
+  height: 150rpx;
+}
+.saveView{
+  display: flex;
+  justify-content:space-between;
+  width:253rpx;
+  font-size: 26rpx
+}
+.address{
+  font-size:26rpx;
+  margin-top:14rpx;
+}
+.container {
+    width: 100%;                                                                          
+    padding:0;
+    margin: 0;
+    background-color: #fff;
+}

@@ -1,0 +1,11 @@
+<!--pages/help/help.wxml-->
+<view class="container">
+  <map id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="12" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" show-location style="width: 100%; height: 100vh;">
+  </map>
+
+  <view  wx:if="{{clicked}}" class="list">
+    <import src="../template/oilList.wxml"/>
+    <template is="oilList" data="{{oilList:oilList}}"/>
+  </view>
+
+</view>

@@ -1,0 +1,114 @@
+/* pages/help/help.wxss */
+.list{
+  position:absolute;
+  bottom:0rpx;
+}
+.listItme{
+  height: 162rpx;
+  width: 600rpx;
+  background-color: rgb(240, 246, 247);
+  margin-bottom: 10rpx;
+  border-radius:25rpx;
+  padding:30rpx;
+}
+
+.listItme image{
+  margin-top: 10px;
+  height:80rpx;
+  width:80rpx
+}
+
+.allItem{
+  position:relative;
+}
+.flex-middle{
+  width: 88%;
+  margin-left:2%;
+}
+.flex-middle .yuexiao{
+  float: right;
+  color:#aaa;
+}
+.price{
+  margin-top: 3%;
+}
+.name{
+  font-size: 32rpx;
+}
+.address{
+  font-size: 24rpx;
+  color:#aaa;
+  margin-top: 3%;
+}
+/* .daohang image{
+  width:80rpx;
+  height:80rpx;
+} */
+.daohang{
+  width:78rpx;
+  height:78rpx;
+  margin-top:1.5%;
+  margin-right: 3%;
+  border-radius:50%;
+  background:rgb(77, 107, 255);
+}
+.daohang image{
+	width:37rpx;
+  height:37rpx;
+  position:absolute;
+  left:18rpx;
+  top:9rpx;
+}
+.daohang span{	
+	font-size:20rpx;
+  color:#fff;
+  position:absolute;
+  left:19rpx;
+  top:41rpx;
+}
+.yuexiao{
+  font-size:25rpx;
+  text-align: right
+}
+.daohang{
+  position:absolute;
+  right:31rpx;
+  top:66rpx;
+} 
+.container {
+    width: 100%;
+    padding:0;
+    margin: 0;
+    background-color: #fff;
+}
+.noMore{
+  text-align: center;
+  font-size: 26rpx
+}
+
+.sort-panel{
+    width:100%;
+    height: 45px;
+    display:flex;
+    z-index: 1000;
+    flex-direction: row;
+    justify-content: space-around;
+    border-bottom: 1px solid #e8e8e8;
+    background-color: rgba(255, 255, 255, 0.96);
+}
+
+.sort-item{
+    width:68px;
+    height: 45px;
+    color: #545454;
+    font-size:13rpx;
+    text-align: center;
+    padding-top:13rpx;
+    flex-direction: row;
+}
+.noMore{
+  margin-top:20rpx;
+}
+.noMore text{
+  color: #666;
+}

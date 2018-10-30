@@ -1,0 +1,48 @@
+<!--index.wxml-->
+<view class='select_box'>
+    <!-- 选择框1 -->
+    <view class='select' catchtap='selectTap'>
+        <text class='select_text'>{{selectData[index]}}</text>
+        <image class='select_img' src='../../resources/images/gobottom.png'></image>         
+    </view>
+    <view class='option_box' style='height:{{show?(selectData.length>5?300:selectData.length*60):0}}rpx;'>
+        <text class='option' style='{{index==selectData.length-1&&"border:0;"}}' wx:for='{{selectData}}' wx:key='this' data-index='{{index}}' catchtap='optionTap'>{{item}}</text>
+    </view>
+
+     <!-- 选择框2 -->
+    <view class='select' catchtap='selectTap'>
+        <text class='select_text'>{{selectData2[index]}}</text>
+        <image class='select_img' src='../../resources/images/gobottom.png'></image>         
+    </view>
+    <view class='option_box' style='height:{{show?(selectData2.length>5?300:selectData.length*60):0}}rpx;'>
+        <text class='option' style='{{index==selectData2.length-1&&"border:0;"}}' wx:for='{{selectData2}}' wx:key='this' data-index='{{index}}' catchtap='optionTap'>{{item}}</text>
+    </view>
+
+     <!-- 选择框3 -->
+    <view class='select' style="border:none;" catchtap='selectTap'>
+        <text class='select_text'>{{selectData3[index]}}</text>
+        <image class='select_img' src='../../resources/images/gobottom.png'></image>         
+    </view>
+    <view class='option_box' style='height:{{show?(selectData3.length>5?300:selectData.length*60):0}}rpx;'>
+        <text class='option' style='{{index==selectData3.length-1&&"border:0;"}}' wx:for='{{selectData3}}' wx:key='this' data-index='{{index}}' catchtap='optionTap'>{{item}}</text>
+    </view>
+</view>
+<view class="container">
+
+  <view class="nav">
+    
+  </view>
+  
+  <view class="list">
+    <import src="../template/oilList.wxml"/>
+    <template is="oilList" data="{{oilList:oilList}}"/>
+  </view>
+
+  <view wx:if="{{hasMore}}" >
+      <button style="border:none" size='mini' plain="true" loading="true">加载中...</button>
+  </view>
+  <view wx:else class='noMore'><text>更多内容，敬请期待~</text></view>
+</view>
+<view class='quickOil'>
+  <button>一键加油</button>
+</view>

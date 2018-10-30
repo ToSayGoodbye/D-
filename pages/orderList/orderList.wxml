@@ -1,0 +1,9 @@
+<!--pages/orderList/orderList.wxml-->
+<view class="container">
+
+  <view class="list">
+      <import src="../template/orderList.wxml"/>
+      <template is="orderList" data="{{orderList:orderList}}"/>
+  </view>
+  
+</view>

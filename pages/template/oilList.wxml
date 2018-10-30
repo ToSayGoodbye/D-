@@ -1,0 +1,32 @@
+<!-- oilList.wxml -->
+<template name="oilItem">
+  <view class="allItem">
+    <view bindtap="toDetail" data-oil="{{item}}" class="listItme flex-row" style="display: flex;">
+     <view>
+        <image src="../../resources/images/jiayou.png"></image>
+     </view>
+
+     <view class="flex-row flex-middle" style="display: block;">
+        <view class="flex-view-item name">
+            {{item.name}} 
+            <span class="yuexiao">月销300单</span>
+        </view>
+        <view class="flex-view-item address">{{item.address}}</view>
+        <view class="flex-view-item price">￥{{item.price}}</view>
+      </view>
+    </view>
+
+    <!-- 导航相关 -->
+    <view bindtap='daoHang' data-oil="{{item}}" class="daohang">
+        <image src="../../resources/images/daohang.png"></image>
+        <span>导航</span>
+    </view>
+
+  </view>
+</template>
+
+<template name="oilList">
+    <block wx:for="{{oilList}}" wx:key="key" >
+        <template is="oilItem" data="{{index:index,item:item}}"/>
+    </block>
+</template>

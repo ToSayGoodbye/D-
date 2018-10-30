@@ -1,0 +1,44 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/user/user",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/code/code",
+    "pages/help/help",
+    "pages/orderList/orderList",
+    "pages/detail/detail"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "豆丁",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#888989",
+    "selectedColor": "#da3751",
+    "borderStyle": "#888989",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "text": "首页",
+        "pagePath": "pages/index/index",
+        "iconPath": "resources/images/home.png",
+        "selectedIconPath": "resources/images/home_selected.png"
+      },
+      {
+        "text": "帮助",
+        "pagePath": "pages/help/help",
+        "iconPath": "resources/images/help.png",
+        "selectedIconPath": "resources/images/help_selected.png"
+      },
+      {
+        "text": "我",
+        "pagePath": "pages/user/user",
+        "iconPath": "resources/images/me.png",
+        "selectedIconPath": "resources/images/me_selected.png"
+      }
+    ]
+  }
+}

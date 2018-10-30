@@ -1,0 +1,9 @@
+<!--导航nav组件 -->
+<template name="nav">
+    <view class="sort-panel">
+      <block wx:for="{{navList}}" wx:key="">
+        <view id="{{item.id}}" data-index="{{index}}"
+             class="sort-item" catchtap="onTapTag">{{item.title}}</view>
+      </block>
+    </view>
+</template>

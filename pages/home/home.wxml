@@ -1,0 +1,6 @@
+<!--pages/home/home.wxml-->
+ <view class="phone">
+    <input bindinput="savePhone" placeholder="请输入您的手机号" type="number"/>
+    <button type="primary"  bindtap="nextPage">下一步</button>
+ </view>
+ <view>{{temp}}</view>

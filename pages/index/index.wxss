@@ -1,0 +1,225 @@
+/**index.wxss**/
+page{
+  background: #efefef;
+}
+.select_box{
+  background: #fff;
+  width: 100%;
+  position: relative;
+  height:36px;
+  box-shadow: 2px #666;
+}
+.select{
+  box-sizing: border-box;
+  width: 33%;
+  height: 70rpx;
+  /* border-right: 1px solid #aaa; */
+  background: #fff;
+  display: inline-block;
+  align-items: center;
+  padding: 0 20rpx;
+  text-align:center;
+  position: relative;
+}
+.select:not(:nth-of-type(5)):after{
+    content:"";
+    position:absolute;
+    width:1px;
+    height:70%;
+    top:12%;
+    right:0;
+    background-color:#666;
+    -webkit-transform:scaleX(0.5);
+    transform:scaleX(0.5);
+}
+
+.select_box:last-child{
+  border: none;
+}
+.select_text{
+  font-size: 35rpx;
+  flex: 1;
+  color:#666;
+
+}
+.select_img{
+  width: 30rpx;
+  height: 40rpx;
+  display: block;
+  transition:transform 0.3s;
+  position: absolute;
+  right: 20rpx;
+  top:6rpx;
+}
+
+
+.option_box{
+  position: absolute;
+  top: 70rpx;
+  width: 33%;
+  border:1px solid #efefef;
+  box-sizing: border-box;
+  height: 0;
+  z-index: 99999;
+  overflow-y: auto;
+  border-top: 0;
+  background: #fff;
+  transition: height 0.3s;
+  text-align:center;
+
+}
+.option_box:nth-of-type(2){
+  left: 0%;
+}
+.option_box:nth-of-type(4){
+  left: 33%;
+}
+.option_box:nth-of-type(6){
+  left: 66%;
+}
+.option{
+  display: block;
+  line-height: 40rpx;
+  font-size: 30rpx;
+  border-bottom: 1px solid #efefef;
+  padding: 10rpx;
+}
+
+
+.container {
+    width: 100%;
+    padding:0;
+    margin: 0;
+    background-color: #efefef;
+}
+.list{
+  width:100%;
+}
+.allItem{
+  position:relative;
+  width: 84%;
+  left: 4%;
+}
+.listItme{
+  height: 162rpx;
+  width: 100%;
+  background-color: #fff;
+  margin-top: 15rpx;
+  border-radius:25rpx;
+  padding: 30rpx;
+}
+
+.listItme image{
+  margin-top: 10px;
+  height:80rpx;
+  width:80rpx
+}
+
+
+.flex-middle{
+  width: 88%;
+  margin-left:2%;
+}
+.flex-middle .yuexiao{
+  float: right;
+  color:#888;
+}
+.price{
+  margin-top: 3%;
+}
+.name{
+  font-size: 32rpx;
+}
+.address{
+  font-size: 24rpx;
+  color:#888;
+  margin-top: 3%;
+}
+/* .daohang image{
+  width:80rpx;
+  height:80rpx;
+} */
+.daohang{
+  width:78rpx;
+  height:78rpx;
+  margin-top:1.5%;
+  margin-right: 3%;
+  border-radius:50%;
+  background:rgb(77, 107, 255);
+ 
+
+}
+.daohang image{
+	width:37rpx;
+  height:37rpx;
+  position:absolute;
+  left:18rpx;
+  top:9rpx;
+}
+.daohang span{	
+	font-size:20rpx;
+  color:#fff;
+  position:absolute;
+  left:19rpx;
+  top:41rpx;
+}
+.yuexiao{
+  font-size:25rpx;
+  text-align: right
+}
+.daohang{
+  position:absolute;
+  right:-31rpx;
+  top:66rpx;
+} 
+
+.noMore{
+  text-align: center;
+  font-size: 26rpx
+}
+
+.sort-panel{
+    width:100%;
+    height: 45px;
+    display:flex;
+    z-index: 1000;
+    flex-direction: row;
+    justify-content: space-around;
+    border-bottom: 1px solid #e8e8e8;
+    background-color: rgba(255, 255, 255, 0.96);
+}
+
+.sort-item{
+    width:68px;
+    height: 45px;
+    color: #545454;
+    font-size:13rpx;
+    text-align: center;
+    padding-top:13rpx;
+    flex-direction: row;
+}
+.noMore{
+  margin-top:20rpx;
+}
+.noMore text{
+  color: #666;
+}
+
+
+
+.quickOil{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 150rpx;
+  background: #fff;
+  border-radius: 130rpx 130rpx 0 0;
+}
+.quickOil button{
+  width: 35%;
+  background: #f13e11;
+  border-color: #f13e11;
+  margin-top: 30rpx;
+  border-radius: 45rpx;
+  color: #fff;
+}

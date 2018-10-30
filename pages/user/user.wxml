@@ -1,0 +1,21 @@
+<page>
+    <view class="user-info">
+        <image src="../../resources/images/user.png" class="avatar" />
+        <text class="phone">{{phone}}</text>
+        <view class="title">
+            私家车车主
+        </view>
+    </view>
+    <navigator class="menu" url="../orderList/orderList">
+        <image class="navImage" src="../../resources/images/order.png"/>
+        <text>我的订单</text>
+    </navigator>
+    <navigator class="menu" url="../mycontent/mycontent?tab=0">
+         <image class="navImage" src="../../resources/images/quan.png"/>
+        <text>我的优惠券</text>
+    </navigator>
+    <navigator class="menu" url="../mycontent/mycontent?tab=0">
+         <image class="navImage" src="../../resources/images/out.png"/>
+        <text>退出登录</text>
+    </navigator>
+</page>
