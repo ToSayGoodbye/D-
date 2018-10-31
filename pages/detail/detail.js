@@ -1,14 +1,46 @@
 // pages/detail/detail.js
 var util = require('../../utils/util.js');
 
+var navList = [
+  { id: "0", title: "92#" },
+  { id: "1", title: "93#" },
+  { id: "2", title: "95#" }
+];
+
+var shootIndex = [1,2,3,4]
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    oil:null
+    oil:null,
+    activeIndex:0,
+    tab:'0',
+    navList: navList,
+
+    activeShootIndex:'',
+    shootIndex: shootIndex
   },
+
+  onTapTag:function(e){
+    var that = this;
+    var tab = e.currentTarget.id;
+    var index = e.currentTarget.dataset.index;
+    that.setData({
+      activeIndex: index,
+      tab: tab
+    });
+  },
+  onTapShoot: function (e) {
+    var that = this;
+    var index = e.currentTarget.dataset.index;
+    that.setData({
+      activeShootIndex: index
+    });
+  },
+
   //调用支付
   toPay: function (e) {
     var that = this;
@@ -17,7 +49,6 @@ Page({
         that.getOpenId(res.code);
       }
     });
-
   },
   //获取openid
   getOpenId: function (code) {

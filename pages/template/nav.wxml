@@ -3,7 +3,8 @@
     <view class="sort-panel">
       <block wx:for="{{navList}}" wx:key="">
         <view id="{{item.id}}" data-index="{{index}}"
-             class="sort-item" catchtap="onTapTag">{{item.title}}</view>
+              class="sort-item {{index == activeIndex ? 'comb on' : ''}}"
+              catchtap="onTapTag">{{item.title}}</view>
       </block>
     </view>
 </template>

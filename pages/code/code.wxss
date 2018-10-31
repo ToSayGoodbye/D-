@@ -1,1 +1,58 @@
 /* pages/code/code.wxss */
+.phone{
+  margin-top: 30%;
+  width:100%
+}
+.denglu{
+  margin-top: 30px;
+  width: 87%;
+  background-color:rgb(223, 110, 45);
+}
+.phone input{
+  border: 1px solid #666;
+  border-radius: 6px;
+  width:86%;
+  height: 41px;
+  margin-left:51rpx
+}
+.title{
+  font-size:39rpx;
+  font-weight:bold;
+  text-align:center;
+  margin-bottom:99rpx;
+}
+.phoneTitle{
+  padding:0rpx 50rpx 40rpx 50rpx;
+  font-size: 33rpx;
+  justify-content:space-between
+}
+.container {
+    width: 100%;
+    padding:0;
+    margin: 0;
+    background-color: #fff;
+}
+.emailCode{
+ width: 118px;
+ height: 28px;
+ align-items: center;
+ justify-content: center;
+ display: flex;
+ flex-direction: row;
+ color:white;
+ font-size: 14px;
+ background-color: rgb(223, 110, 45);
+ border-radius: 14px;
+}
+.emailCodeSend{
+ width: 118px;
+ height: 28px;
+ align-items: center;
+ justify-content: center;
+ display: flex;
+ flex-direction: row;
+ color:white;
+ font-size: 14px;
+ background-color: rgb(230, 230, 230);
+ border-radius: 14px;
+}

@@ -27,12 +27,12 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    var cookieid = wx.getStorageSync('doudingcoo0kieid');
-    if (cookieid != null && cookieid != "") {
-      wx.reLaunch({
-        url: '../index/index'
-      })
-    }
+    // var cookieid = wx.getStorageSync('doudingcoo0kieid');
+    // if (cookieid != null && cookieid != "") {
+    //   wx.reLaunch({
+    //     url: '../index/index'
+    //   })
+    // }
   },
 
   /**
@@ -71,12 +71,30 @@ Page({
   },
   nextPage:function(){
     var phone = this.data.phone;
+    var myreg = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1})|(17[0-9]{1}))+\d{8})$/;
+    if (phone.length==0){
+      wx.showToast({
+        title: '请输入手机号',
+        icon: 'none',
+        duration: 800
+      })
+      return
+    }
+    if (!myreg.test(phone)) {
+      wx.showToast({
+        title: '手机号有误',
+        icon: 'none',
+        duration: 800
+      })
+      return
+    }
+
     wx.setStorageSync('doudingphone', phone);
     wx.setStorageSync('doudingcoo0kieid', phone);
     app.globalData.phone = phone
     app.globalData.cookieid = phone
-    wx.reLaunch({
-      url: '../index/index'
+    wx.navigateTo({
+      url: '../code/code?phone=' + phone
     })
   },
   clearValue: function () {

@@ -1,6 +1,8 @@
 <!--pages/home/home.wxml-->
  <view class="phone">
+    <view style="text-align:center">
+      <image class="logo" src="/resources/images/logo.png"></image>
+    </view>
     <input bindinput="savePhone" placeholder="请输入您的手机号" type="number"/>
-    <button type="primary"  bindtap="nextPage">下一步</button>
+    <button  bindtap="nextPage">下一步</button>
  </view>
- <view>{{temp}}</view>

@@ -12,19 +12,22 @@ Page({
     type: 0,
     order: 1,
     querying: false,
+
+    oilId:""
   },
   //事件处理函数
   bindViewTap: function () {
     console.log(app.globalData.userInfo)
   },
-  onLoad: function () {
+  onLoad: function (options) {
     var that = this;
     //获取位置
     wx.getLocation({
       success: function (e) {
         that.setData({
           latitude: e.latitude,
-          longitude: e.longitude
+          longitude: e.longitude,
+          oilId: options.id
         });
         that.getData();
       }
@@ -48,6 +51,9 @@ Page({
     var phone = wx.getStorageSync('doudingphone');
     var url = '/queryOrderList?page=' + (page++) + '&pagesize=' + (that.data.pagesize) + 
     '&phone='+phone;
+    if(that.data.oilId!='0'){
+      url = url + '&id=' + that.data.oilId;
+    }
     util.req(url, null, function (res) {
       var list = res.data.data;
       var length = list.length;

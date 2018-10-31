@@ -2,7 +2,8 @@ var app = getApp();
 Page({
     data:{
         userInfo:{},
-        phone:""
+        phone:"",
+        oilId:'1'
     },
     onLoad:function(){
         var that = this;

@@ -33,5 +33,21 @@
           </view>
         </view>
     </view>
-    <button bindtap='toPay'>立即支付</button>
+    <import src="../template/nav.wxml"/>
+    <template is="nav" data="{{ navList, activeIndex }}"/>
+    <view class="flex-row shoots" style="display: flex;">
+      <view catchtap="onTapShoot" data-index="{{shootIndex[0]}}" class="flex-view-item shoot {{shootIndex[0] == activeShootIndex ? 'shootOn' : ''}}">
+        1号枪
+      </view>
+      <view catchtap="onTapShoot" data-index="{{shootIndex[1]}}" class="flex-view-item shoot {{shootIndex[1] == activeShootIndex ? 'shootOn' : ''}}">
+        2号枪
+      </view>
+      <view catchtap="onTapShoot" data-index="{{shootIndex[2]}}" class="flex-view-item shoot {{shootIndex[2] == activeShootIndex ? 'shootOn' : ''}}">
+       3号枪
+      </view>
+      <view catchtap="onTapShoot" data-index="{{shootIndex[3]}}" class="flex-view-item shoot {{shootIndex[3] == activeShootIndex ? 'shootOn' : ''}}">
+        4号枪
+      </view>
+    </view>
+    <button type="primary" bindtap='toPay'>立即支付</button>
 </view>

@@ -1,18 +1,83 @@
 // pages/code/code.js
+var app = getApp();
+var countdown = 10;
+var settime = function (that) {
+  if (countdown == 0) {
+    that.setData({
+      codeIsCanClick: true
+    })
+    countdown = 10;
+    return;
+  } else {
+    that.setData({
+      codeIsCanClick: false,
+      last_time: countdown
+    })
+    countdown--;
+  }
+  setTimeout(function () {
+    settime(that)
+  }, 1000
+  )
+}
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    phone:"111",
+    codeIsCanClick:false,
+    last_time:"",
+    code:""
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    this.setData({
+      phone: options.phone
+    })
+    var that = this;
+    settime(that)
+  },
 
+  /**
+ * 点击验证码按钮
+ */
+  clickCode: function () {
+    var that = this;
+    settime(that)
+  },
+
+  /**
+   * 登录
+   */
+  login:function(){
+
+    var code = this.data.code;
+    var myreg = /^\d{4}$/;
+    if (code.length == 0) {
+      wx.showToast({
+        title: '请输入验证码',
+        icon: 'none',
+        duration: 800
+      })
+      return
+    }
+    if (!myreg.test(code)) {
+      wx.showToast({
+        title: '验证码有误',
+        icon: 'none',
+        duration: 800
+      })
+      return
+    }
+
+    wx.reLaunch({
+      url: '../index/index'
+    })
   },
 
   /**
@@ -62,5 +127,10 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  saveCode: function (e) {
+    this.setData({
+      code: e.detail.value
+    });
   }
 })

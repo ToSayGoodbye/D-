@@ -43,6 +43,6 @@
   </view>
   <view wx:else class='noMore'><text>更多内容，敬请期待~</text></view>
 </view>
-<view class='quickOil'>
+<view hidden='true' class='quickOil'>
   <button>一键加油</button>
 </view>

@@ -13,3 +13,7 @@
   text-align: center;
   border-radius:25rpx
 }
+.noMore{
+  text-align: center;
+  font-size: 26rpx
+}

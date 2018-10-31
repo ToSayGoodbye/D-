@@ -1,13 +1,16 @@
 {
   "pages": [
+      "pages/index/index",
     "pages/home/home",
-    "pages/user/user",
-    "pages/index/index",
-    "pages/logs/logs",
     "pages/code/code",
+    "pages/user/user",
+
+    "pages/logs/logs",
     "pages/help/help",
     "pages/orderList/orderList",
-    "pages/detail/detail"
+    "pages/detail/detail",
+    "pages/oilSet/oilSet"
+
   ],
   "window": {
     "backgroundTextStyle": "dark",

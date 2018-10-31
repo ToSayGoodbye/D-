@@ -6,4 +6,9 @@
       <template is="orderList" data="{{orderList:orderList}}"/>
   </view>
   
+  <view wx:if="{{hasMore}}" >
+      <button style="border:none" size='mini' plain="true" loading="true">加载中...</button>
+  </view>
+  <view wx:else class='noMore'><text>已经到底了~</text></view>
+
 </view>

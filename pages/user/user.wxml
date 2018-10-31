@@ -8,7 +8,15 @@
     </view>
     <navigator class="menu" url="../orderList/orderList">
         <image class="navImage" src="../../resources/images/order.png"/>
-        <text>我的订单</text>
+        <text>我的加油订单</text>
+    </navigator>
+    <navigator wx:if="{{oilId!=0}}"  class="menu" url="../orderList/orderList?id={{oilId}}">
+        <image class="navImage" src="../../resources/images/oilDd.png"/>
+        <text>我的油站订单</text>
+    </navigator>
+     <navigator wx:if="{{oilId!=0}}"  class="menu" url="../oilSet/oilSet?id={{oilId}}">
+        <image class="navImage" src="../../resources/images/xiugai.png"/>
+        <text>油站信息设置</text>
     </navigator>
     <navigator class="menu" url="../mycontent/mycontent?tab=0">
          <image class="navImage" src="../../resources/images/quan.png"/>

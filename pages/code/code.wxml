@@ -1,2 +1,17 @@
 <!--pages/code/code.wxml-->
-<text>pages/code/code.wxml</text>
+<view class="container">
+  <view class="phone">
+      <view class="title">
+        验证码已发送至
+      </view>
+      <view class="flex-row phoneTitle" style="display: flex;">
+        <view class="flex-view-item">{{phone}}</view>
+        <view class="flex-view-item">
+           <button class="emailCode" hidden='{{!codeIsCanClick}}' size="mini" bindtap='clickCode'>获取验证码</button>
+            <button class="emailCodeSend" hidden='{{codeIsCanClick}}' size="mini">{{last_time}}s</button>
+        </view>
+      </view>
+      <input bindinput="saveCode" placeholder="请输入验证码" type="number"/>
+      <button class="denglu" bindtap="login">登录</button>
+  </view>
+ </view>
