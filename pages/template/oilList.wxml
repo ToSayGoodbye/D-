@@ -22,6 +22,10 @@
         <span>导航</span>
     </view>
 
+    <span class="distance">
+        {{item.distance}}
+    </span>
+
   </view>
 </template>
 

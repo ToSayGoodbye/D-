@@ -1,20 +1,23 @@
 /* pages/home/home.wxss */
 .phone{
-  margin-top: 27%;
+  margin-top: 23%;
 }
 .phone button{
   margin-top: 30px;
   width: 85%;
-  background-color:rgb(223, 110, 45);
+  background-color:rgb(250, 105, 20);
+  color:#fff;
 }
 .phone input{
   border: 1px solid rgb(102, 102, 102);
   border-radius: 6px;
   width: 85.4%;
   height: 47px;
-  margin-left: 6.8%
+  margin-left: 6.8%;
+  margin-top:40rpx;
+  padding-left:10rpx;
 }
 .logo{
- width:467rpx;
-  height:256rpx 
+ width:406rpx;
+ height:197rpx;
 }

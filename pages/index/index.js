@@ -12,22 +12,95 @@ Page({
     page:1,
     pagesize:10,
     type:0,
-    order:1,
+    order:0,
     querying: false,
 
     userInfo: {},
     latitude:"",
     longitude:"",
     show: false,//控制下拉列表的显示隐藏，false隐藏、true显示
-    selectData: ['1', '2', '3', '4', '5', '6'],//下拉列表的数据
-    selectData2: ['1', '2', '3', '4', '5', '6'],//下拉列表的数据
-    selectData3: ['1', '2', '3', '4', '5', '6'],//下拉列表的数据
-    index: 0//选择的下拉列表下标
+    show2: false,//控制下拉列表的显示隐藏，false隐藏、true显示
+    show3: false,//控制下拉列表的显示隐藏，false隐藏、true显示
+    selectData:'切换地图',//下拉列表的数据
+    mapShow:false,
+    selectData2: ['距离最近', '价格最低'],//下拉列表的数据
+    selectData3: ['#92', '#93', '#95'],//下拉列表的数据
+    index: 0,//选择的下拉列表下标
+    index2: 0,//选择的下拉列表下标
+    index3: 0,//选择的下拉列表下标
+
+    clicked: false,
+    id: "",
+    markers: [{
+      id: '{"id":1,"name":"来往商贸","imgUrl":"","address":"北京市东城区东长安街","type":"0","price":"7.47","order_count":"1","distance":"8.4Km","latitude":"39.908823","longitude":"116.39747"}',
+      latitude: 39.85856,
+      longitude: 116.28616,
+      width: 35,
+      height: 35,
+      iconPath: "/resources/images/jiayou.png",
+      callout: {
+        content: "来往商贸\n7.74/升",
+        color: "#000000",
+        fontSize: "16",
+        borderRadius: 10,
+        bgColor: "#ffffff",
+        padding: 3,
+        display: "ALWAYS",
+        textAlign: "center"
+      },
+    }, {
+        id: '{"id":2,"name":"中国石油","imgUrl":"","address":"北京市东城区东长安街","type":"0","price":"7.47","order_count":"1","distance":"11.0Km","latitude":"39.908823","longitude":"116.39747"}',
+      latitude: 39.908823,
+      longitude: 116.39747,
+      width: 35,
+      height: 35,
+      iconPath: "/resources/images/jiayou.png",
+      callout: {
+        content: "中国石油\n7.74/升",
+        color: "#000000",
+        fontSize: "16",
+        borderRadius: 10,
+        bgColor: "#ffffff",
+        padding: 3,
+        display: "ALWAYS",
+        textAlign: "center"
+      },
+    }],
+    item:""
+  },
+
+  markertap(e) {
+    var object = JSON.parse(e.markerId);
+    this.setData({
+      item: object,
+      clicked: true,
+    })
   },
   // 点击下拉显示框
   selectTap() {
+    var selectData = "切换列表";
+    var mapShow = false;
+    if (this.data.selectData == "切换地图"){
+      selectData = "切换列表";
+      mapShow = true;
+    }else{
+      selectData = "切换地图";
+    }
     this.setData({
-      show: !this.data.show
+      selectData: selectData,
+      mapShow: mapShow
+    });
+  },
+  // 点击下拉显示框
+  selectTap2() {
+    this.setData({
+      show2: !this.data.show2
+    });
+  },
+  // 点击下拉显示框
+  selectTap3() {
+    this.setData({
+      show3: !this.data.show3
     });
   },
   // 点击下拉列表
@@ -35,12 +108,35 @@ Page({
     let Index = e.currentTarget.dataset.index;//获取点击的下拉列表的下标
     this.setData({
       index: Index,
-      show: !this.data.show
+      show: !this.data.show,
+      page:1
     });
+  },
+  // 点击下拉列表
+  optionTap2(e) {
+    let Index = e.currentTarget.dataset.index;//获取点击的下拉列表的下标
+    this.setData({
+      index2: Index,
+      show2: !this.data.show2,
+      page: 1,
+      order: Index
+    });
+    this.getData();
+  },
+  // 点击下拉列表
+  optionTap3(e) {
+    let Index = e.currentTarget.dataset.index;//获取点击的下拉列表的下标
+    this.setData({
+      index3: Index,
+      show3: !this.data.show3,
+      type: Index,
+      page: 1
+    });
+    this.getData();
   },
   //事件处理函数
   bindViewTap: function() {
-    console.log(app.globalData.userInfo)
+   
   },
   onLoad: function () {
     var that = this;

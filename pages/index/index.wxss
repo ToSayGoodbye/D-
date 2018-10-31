@@ -2,6 +2,19 @@
 page{
   background: #efefef;
 }
+.listMap{
+  width:100%;
+  position:fixed;
+  bottom:0rpx;
+  z-index: 99999;
+}
+.distance{
+  position:absolute;
+  right:-15rpx;
+  top:159rpx;
+  font-size:25rpx;
+  color:#888
+}
 .select_box{
   background: #fff;
   width: 100%;
@@ -40,7 +53,7 @@ page{
   font-size: 35rpx;
   flex: 1;
   color:#666;
-
+  margin-left:-15rpx;
 }
 .select_img{
   width: 30rpx;
@@ -50,6 +63,11 @@ page{
   position: absolute;
   right: 20rpx;
   top:6rpx;
+}
+.switch{
+  width: 40rpx;
+  height: 40rpx;
+  right:17rpx;
 }
 
 
