@@ -118,6 +118,12 @@ page{
   width: 84%;
   left: 4%;
 }
+.allItem2{
+  position:relative;
+  width: 92%;
+  left: 4%;
+  overflow: auto;
+}
 .listItme{
   height: 162rpx;
   width: 100%;
@@ -132,7 +138,11 @@ page{
   height:80rpx;
   width:80rpx
 }
-
+.listItme cover-image{
+  margin-top: 10px;
+  height:80rpx;
+  width:80rpx
+}
 
 .flex-middle{
   width: 88%;
@@ -141,6 +151,19 @@ page{
 .flex-middle .yuexiao{
   float: right;
   color:#888;
+  font-size:25rpx;
+  text-align: right
+}
+
+.flex-middle2{
+  width: 88%;
+  margin-left:2%;
+}
+.flex-middle2 .yuexiao2{
+  float: right;
+  color:#888;
+  font-size:25rpx;
+  text-align: right
 }
 .price{
   margin-top: 3%;
@@ -164,7 +187,9 @@ page{
   margin-right: 3%;
   border-radius:50%;
   background:rgb(77, 107, 255);
- 
+  position:absolute;
+  right:-31rpx;
+  top:66rpx;
 
 }
 .daohang image{
@@ -174,6 +199,32 @@ page{
   left:18rpx;
   top:9rpx;
 }
+.daohang2{
+  width:78rpx;
+  height:78rpx;
+  margin-top:1.5%;
+  margin-right: 3%;
+  border-radius:50%;
+  background:rgb(77, 107, 255);
+  position:absolute;
+  right:-31rpx;
+  top:66rpx;
+
+}
+.daohang2 cover-image{
+	width:37rpx;
+  height:37rpx;
+  position:absolute;
+  left:18rpx;
+  top:9rpx;
+}
+.daohang2 cover-view{	
+	font-size:20rpx;
+  color:#fff;
+  position:absolute;
+  left:19rpx;
+  top:41rpx;
+}
 .daohang span{	
 	font-size:20rpx;
   color:#fff;
@@ -181,15 +232,7 @@ page{
   left:19rpx;
   top:41rpx;
 }
-.yuexiao{
-  font-size:25rpx;
-  text-align: right
-}
-.daohang{
-  position:absolute;
-  right:-31rpx;
-  top:66rpx;
-} 
+
 
 .noMore{
   text-align: center;
@@ -225,7 +268,7 @@ page{
 
 
 
-.quickOil{
+/* .quickOil{
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -240,4 +283,4 @@ page{
   margin-top: 30rpx;
   border-radius: 45rpx;
   color: #fff;
-}
+} */
