@@ -23,7 +23,12 @@ Page({
     activeShootIndex:'',
     shootIndex: shootIndex
   },
-
+  /**
+   * 根据type判断具体油型号
+   */
+  getType:function(e){
+    console.log(e);
+  },
   onTapTag:function(e){
     var that = this;
     var tab = e.currentTarget.id;
@@ -32,6 +37,16 @@ Page({
       activeIndex: index,
       tab: tab
     });
+    var url = '/selectOilById?infoNum=' + that.data.oil.infoNum + '&type=' + index
+    util.req(url,null,function(res){
+      var distance = that.data.oil.distance;//复用距离
+      var oil = res.data.data;
+      oil.distance = distance;
+
+      that.setData({
+        oil: oil
+      });
+    })
   },
   onTapShoot: function (e) {
     var that = this;
@@ -97,7 +112,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(options.oil);
+    console.log(options.oil );
     this.setData({
       oil: JSON.parse(options.oil )
     })

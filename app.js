@@ -42,7 +42,7 @@ App({
     userInfo: null,
     cookieid:"",
     phone:"",
-    //requestUrl: 'http://localhost:8080/Douding'
-    requestUrl:'https://www.wangjicheng.xyz/Douding'
+    requestUrl: 'http://localhost:8080/Douding'
+    //requestUrl:'https://www.wangjicheng.xyz/Douding'
   }
 })

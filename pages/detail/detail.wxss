@@ -5,6 +5,13 @@
   width:100%;
   justify-content:space-between;
 }
+.type{
+  font-size:28rpx;
+  text-align:center;
+  color:#888;
+  margin-top:-17rpx;
+  padding:7rpx;
+}
 .shoot{
   padding:20rpx;
   border:1rpx solid rgba(230, 220, 220, 0.89);

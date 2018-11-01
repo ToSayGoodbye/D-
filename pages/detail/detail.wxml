@@ -1,5 +1,6 @@
 <!--pages/detail/detail.wxml-->
 <import src="../template/starts.wxml"/>
+<wxs src="../../resources/tools/tool.wxs" module="tool" />
 <view class="container">
     <view class="oilTitle">
         <view class="titleTop flex-row">
@@ -18,8 +19,8 @@
         
         <view class="titleDown flex-row">
               <view class="flex-view-item">
-                <view>92#(93#)</view>
-                <view>￥7.74</view>
+                <view class="type">{{tool.getType(oil.type)}}</view>
+                <view>￥{{oil.price}}</view>
               </view>
               <view class="flex-view-item flex-row saveView">
                 <view class="flex-view-item">

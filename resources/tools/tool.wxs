@@ -1,0 +1,15 @@
+var getType = function (a) {
+  console.log('a==' + a);
+  switch(a){
+    case '0':
+      return '92#'; 
+      break;
+    case '1':
+      return '93#'; 
+      break;
+    case '2':
+      return '95#';
+      break;
+  }
+}
+module.exports = { getType: getType };
