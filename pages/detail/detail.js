@@ -7,7 +7,6 @@ var navList = [
   { id: "2", title: "95#" }
 ];
 
-var shootIndex = [1,2,3,4]
 
 Page({
 
@@ -20,8 +19,7 @@ Page({
     tab:'0',
     navList: navList,
 
-    activeShootIndex:'',
-    shootIndex: shootIndex
+    activeShootIndex:''
   },
   /**
    * 根据type判断具体油型号
@@ -29,6 +27,9 @@ Page({
   getType:function(e){
     console.log(e);
   },
+  /**
+   * 选择枪事件
+   */
   onTapTag:function(e){
     var that = this;
     var tab = e.currentTarget.id;
@@ -40,8 +41,11 @@ Page({
     var url = '/selectOilById?infoNum=' + that.data.oil.infoNum + '&type=' + index
     util.req(url,null,function(res){
       var distance = that.data.oil.distance;//复用距离
+      
       var oil = res.data.data;
+      var shoots = oil.shoots.split(',');
       oil.distance = distance;
+      oil.shoots = shoots;
 
       that.setData({
         oil: oil
@@ -112,9 +116,12 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(options.oil );
+    var oil = JSON.parse(options.oil);
+    var shoots = oil.shoots.split(',');
+    oil.shoots = shoots;
+    console.log(oil);
     this.setData({
-      oil: JSON.parse(options.oil )
+      oil: oil
     })
   },
 

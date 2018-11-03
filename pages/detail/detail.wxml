@@ -36,19 +36,22 @@
     </view>
     <import src="../template/nav.wxml"/>
     <template is="nav" data="{{ navList, activeIndex }}"/>
-    <view class="flex-row shoots" style="display: flex;">
-      <view catchtap="onTapShoot" data-index="{{shootIndex[0]}}" class="flex-view-item shoot {{shootIndex[0] == activeShootIndex ? 'shootOn' : ''}}">
-        1号枪
+
+    <view wx:if="{{oil.shoots.length>1}}" class="flex-row shoots" style="display: flex;">
+     <block wx:for="{{oil.shoots}}" wx:key="key">
+      <view wx:if="{{index<=3}}" catchtap="onTapShoot" data-index="{{index}}" class="flex-view-item shoot {{index == activeShootIndex ? 'shootOn' : ''}}">
+        {{item}}号枪
       </view>
-      <view catchtap="onTapShoot" data-index="{{shootIndex[1]}}" class="flex-view-item shoot {{shootIndex[1] == activeShootIndex ? 'shootOn' : ''}}">
-        2号枪
-      </view>
-      <view catchtap="onTapShoot" data-index="{{shootIndex[2]}}" class="flex-view-item shoot {{shootIndex[2] == activeShootIndex ? 'shootOn' : ''}}">
-       3号枪
-      </view>
-      <view catchtap="onTapShoot" data-index="{{shootIndex[3]}}" class="flex-view-item shoot {{shootIndex[3] == activeShootIndex ? 'shootOn' : ''}}">
-        4号枪
-      </view>
+     </block>
     </view>
+
+    <view wx:if="{{oil.shoots.length>4}}" class="flex-row shoots" style="display: flex;">
+     <block wx:for="{{oil.shoots}}" wx:key="key">
+      <view wx:if="{{index<=7 && index>=4}}" catchtap="onTapShoot" data-index="{{index}}" class="flex-view-item shoot {{index == activeShootIndex ? 'shootOn' : ''}}">
+        {{item}}号枪
+      </view>
+     </block>
+    </view>
+
     <button type="primary" bindtap='toPay'>立即支付</button>
 </view>

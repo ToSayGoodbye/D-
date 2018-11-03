@@ -1,5 +1,4 @@
 var getType = function (a) {
-  console.log('a==' + a);
   switch(a){
     case '0':
       return '92#'; 

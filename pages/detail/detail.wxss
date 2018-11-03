@@ -13,10 +13,12 @@
   padding:7rpx;
 }
 .shoot{
-  padding:20rpx;
+  padding:15rpx;
   border:1rpx solid rgba(230, 220, 220, 0.89);
-  margin:20rpx;
+  margin:18rpx;
   border-radius:20rpx;
+  width:121rpx;
+  text-align:center;
 }
 .oilTitle{
   height: 300rpx;
