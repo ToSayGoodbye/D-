@@ -32,7 +32,7 @@ Page({
     clicked: false,
     id: "",
     markers: [{
-      id: '{"id":1,"name":"来往商贸","imgUrl":"","address":"北京市东城区东长安街","type":"0","price":"7.47","order_count":"1","distance":"8.4Km","latitude":"39.908823","longitude":"116.39747"}',
+      id: '{"id":1,"name":"来往商贸","imgUrl":"","address":"北京市东城区东长安街","type":"0","price":"7.47","order_count":"1","distance":"8.4Km","latitude":"39.908823","longitude":"116.39747","shoots":"1,3,5,7,8,9","infoNum":"1"}',
       latitude: 39.85856,
       longitude: 116.28616,
       width: 35,
@@ -49,7 +49,7 @@ Page({
         textAlign: "center"
       },
     }, {
-        id: '{"id":2,"name":"中国石油","imgUrl":"","address":"北京市东城区东长安街","type":"0","price":"7.47","order_count":"1","distance":"11.0Km","latitude":"39.908823","longitude":"116.39747"}',
+        id: '{"id":2,"name":"中国石油","imgUrl":"","address":"北京市东城区东长安街","type":"0","price":"7.47","order_count":"1","distance":"11.0Km","latitude":"39.908823","longitude":"116.39747","shoots":"1,3,5,7,8,9","infoNum":"1"}',
       latitude: 39.908823,
       longitude: 116.39747,
       width: 35,

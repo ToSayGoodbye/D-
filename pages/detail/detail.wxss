@@ -3,7 +3,7 @@
 
 .shoots{
   width:100%;
-  justify-content:space-between;
+  justify-content:  flex-start;
 }
 .type{
   font-size:28rpx;

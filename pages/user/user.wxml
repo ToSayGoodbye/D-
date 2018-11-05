@@ -2,19 +2,22 @@
     <view class="user-info">
         <image src="../../resources/images/user.png" class="avatar" />
         <text class="phone">{{phone}}</text>
-        <view class="title">
-            私家车车主
-        </view>
+          <view wx:if="{{infoNum!=0}}" class="title">
+              油站管理员
+          </view>
+          <view wx:else class="title">
+              私家车车主
+          </view>
     </view>
     <navigator class="menu" url="../orderList/orderList">
         <image class="navImage" src="../../resources/images/order.png"/>
         <text>我的加油订单</text>
     </navigator>
-    <navigator wx:if="{{oilId!=0}}"  class="menu" url="../orderList/orderList?id={{oilId}}">
+    <navigator wx:if="{{infoNum!=0}}"  class="menu" url="../orderList/orderList?id={{infoNum}}">
         <image class="navImage" src="../../resources/images/oilDd.png"/>
         <text>我的油站订单</text>
     </navigator>
-     <navigator wx:if="{{oilId!=0}}"  class="menu" url="../oilSet/oilSet?id={{oilId}}">
+     <navigator wx:if="{{infoNum!=0}}"  class="menu" url="../oilSet/oilSet?infoNum={{infoNum}}">
         <image class="navImage" src="../../resources/images/xiugai.png"/>
         <text>油站信息设置</text>
     </navigator>

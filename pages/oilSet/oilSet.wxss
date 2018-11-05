@@ -37,7 +37,7 @@ checkbox, radio{
   margin-right: 10rpx;
 }
 button{
-  margin-top: 20rpx;
+  margin-top: 17rpx;
   margin-bottom: 20rpx;
 }
 form{
@@ -85,11 +85,14 @@ input {
   color: #9B9B9B;
   font-size: 32rpx;
 }
+.minpadding{
+  padding:43rpx 0
+}
 
 .page-body {
   width: 100%;
   flex-grow: 1;
-  overflow-x: hidden;
+  text-align:center;
 }
 .page-body-wrapper {
   display: flex;

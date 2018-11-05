@@ -1,5 +1,5 @@
 <!--pages/home/home.wxml-->
- <view class="phone">
+ <view wx:if="{{show}}" class="phone">
     <view style="text-align:center">
       <image class="logo" src="/resources/images/logo.png"></image>
     </view>

@@ -1,4 +1,5 @@
 <!--index.wxml-->
+
 <view class='select_box'>
     <!-- 选择框1 -->
     <view class='select' catchtap='selectTap'>
@@ -13,18 +14,14 @@
         <text class='select_text'>{{selectData2[index2]}}</text>
         <image class='select_img' src='../../resources/images/gobottom.png'></image>         
     </view>
-    <view class='option_box' style='height:{{show2?(selectData2.length>5?300:selectData2.length*60):0}}rpx;'>
-        <text class='option' style='{{index==selectData2.length-1&&"border:0;"}}' wx:for='{{selectData2}}' wx:key='this' data-index='{{index}}' catchtap='optionTap2'>{{item}}</text>
-    </view>
+    
 
      <!-- 选择框3 -->
     <view class='select' style="border:none;" catchtap='selectTap3'>
         <text class='select_text'>{{selectData3[index3]}}</text>
         <image class='select_img' src='../../resources/images/gobottom.png'></image>         
     </view>
-    <view class='option_box' style='height:{{show3?(selectData3.length>5?300:selectData3.length*60):0}}rpx;'>
-        <text class='option' style='{{index==selectData3.length-1&&"border:0;"}}' wx:for='{{selectData3}}' wx:key='this' data-index='{{index}}' catchtap='optionTap3'>{{item}}</text>
-    </view>
+    
 </view>
 <view class="container">
 
@@ -44,9 +41,10 @@
   <view hidden="{{!mapShow}}">
        <map id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="12" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" show-location style="width: 100%; height: 94vh;">
        </map>
+
    <cover-view  wx:if="{{clicked}}" class="listMap">
             <cover-view class="allItem2">
-                <cover-view bindtap="toDetail" data-oil="{{item}}" class="listItme flex-row" style="display: flex;">
+                <cover-view bindtap="toDetail" data-oil="{{item}}" class="listItme flex-row" style="display: flex;width:90%;height:140rpx;">
                 <cover-view>
                     <cover-image src="../../resources/images/jiayou.png"></cover-image>
                 </cover-view>
@@ -62,12 +60,13 @@
                 </cover-view>
 
                 <!-- 导航相关 -->
-                <cover-view bindtap='daoHang2' data-oil="{{item}}" class="daohang">
+                <cover-view bindtap='daoHang' data-oil="{{item}}" class="daohang"
+                style="right:31rpx">
                     <cover-image src="../../resources/images/daohang.png"></cover-image>
                     <cover-view>导航</cover-view>
                 </cover-view>
 
-                <cover-view class="distance2">
+                <cover-view class="distance" style="right:52rpx">
                     {{item.distance}}
                 </cover-view>
 
@@ -76,7 +75,15 @@
   
 
   </view>
-  
+
+  <!--选项-->
+  <cover-view class='option_box' style='height:{{show2?(selectData2.length>5?300:selectData2.length*60):0}}rpx;left:33%'>
+        <cover-view class='option' style='{{index==selectData2.length-1&&"border:0;"}}' wx:for='{{selectData2}}' wx:key='this' data-index='{{index}}' catchtap='optionTap2'>{{item}}</cover-view>
+    </cover-view>
+
+    <cover-view class='option_box' style='height:{{show3?(selectData3.length>5?300:selectData3.length*60):0}}rpx;left:66%'>
+        <cover-view class='option' style='{{index==selectData3.length-1&&"border:0;"}}' wx:for='{{selectData3}}' wx:key='this' data-index='{{index}}' catchtap='optionTap3'>{{item}}</cover-view>
+    </cover-view>
 <view hidden='true' class='quickOil'>
   <button>一键加油</button>
 </view>

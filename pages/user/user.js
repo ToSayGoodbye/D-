@@ -3,23 +3,15 @@ Page({
     data:{
         userInfo:{},
         phone:"",
-        oilId:'1'
+        infoNum:'0'
     },
     onLoad:function(){
         var that = this;
       var phone = wx.getStorageSync('doudingphone');
-        wx.getUserInfo({
-            success: function(res) {
-                var userInfo = res.userInfo;
-                that.setData({
-                    userInfo:{
-                        avatar:userInfo.avatarUrl,
-                        nickname:userInfo.nickName
-                    },
-                    phone: phone
-                })
-            },
-            fail:function(err){}
-        });
+      var infoNum = wx.getStorageSync('doudinginfoNum');
+      that.setData({
+        phone: phone,
+        infoNum: infoNum
+      })
     }
 })

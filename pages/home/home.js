@@ -6,7 +6,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    phone:""
+    phone:"",
+    show:false
   },
 
   /**
@@ -27,12 +28,16 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    // var cookieid = wx.getStorageSync('doudingcoo0kieid');
-    // if (cookieid != null && cookieid != "") {
-    //   wx.reLaunch({
-    //     url: '../index/index'
-    //   })
-    // }
+    var cookieid = wx.getStorageSync('doudingcoo1kieid');
+    if (cookieid != null && cookieid != "") {
+      wx.reLaunch({
+        url: '../index/index'
+      })
+    }else{
+      this.setData({
+        show:true
+      })
+    }
   },
 
   /**
@@ -90,7 +95,8 @@ Page({
     }
 
     wx.setStorageSync('doudingphone', phone);
-    wx.setStorageSync('doudingcoo0kieid', phone);
+    wx.setStorageSync('doudingcoo1kieid', phone);
+    wx.setStorageSync('doudinginfoNum', 1);
     app.globalData.phone = phone
     app.globalData.cookieid = phone
     wx.navigateTo({
