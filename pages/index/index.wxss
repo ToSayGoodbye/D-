@@ -87,7 +87,7 @@ page{
   overflow-y: auto;
   border-top: 0;
   background: #f7f6f6;
-  transition: height 0.3s;
+  /* transition: height 0.3s;  */
   text-align:center;
 
 }

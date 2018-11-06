@@ -93,8 +93,17 @@ Page({
   },
   // 点击下拉显示框
   selectTap2() {
+    var animation = wx.createAnimation({
+       
+        duration: 1000,
+        timingFunction: "ease",
+        
+    })
+
+    this.animation=animation;
     this.setData({
-      show2: !this.data.show2
+        animationData: animation.export(),
+        show2: !this.data.show2
     });
   },
   // 点击下拉显示框
