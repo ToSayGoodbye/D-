@@ -1,44 +1,30 @@
-// pages/qianbao/qianbao.js
-var util = require('../../utils/util.js');
+// pages/chenggong/chenggong.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    balance:0,
-    infoNum:''
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var that = this;
-    var infoNum = options.id;
-    var url = '/selectBalance?infoNum='+infoNum
-    util.req(url, null, function (res) {
-      that.setData({
-        balance: res.data.data,
-        infoNum:infoNum
-      });
+
+  },
+  queding:function(){
+
+    var pages = getCurrentPages();
+    var prePage = pages[pages.length - 3];
+
+    prePage.fresh();
+
+    wx.navigateBack({
+      delta:2
     })
   },
-
-  /**
-   * 更新价格
-   */
-  fresh:function(){
-    var that = this;
-    var infoNum = that.data.infoNum;
-    var url = '/selectBalance?infoNum=' + infoNum
-    util.req(url, null, function (res) {
-      that.setData({
-        balance: res.data.data
-      });
-    })
-  },
-
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

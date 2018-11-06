@@ -1,0 +1,22 @@
+/* pages/tixian/tixian.wxss */
+.inpu{
+  padding:20rpx
+}
+.line{
+  height:1px;
+  background-color:#8888;
+  margin-left:47rpx;
+  margin-right:47rpx;
+}
+.title{
+  margin-left:27rpx;
+  font-size:30rpx;
+  color:#8888;
+}
+.page{
+  padding-top:62rpx;
+}
+.txbtn{
+  padding:25rpx; 
+  padding-top:51rpx;
+}

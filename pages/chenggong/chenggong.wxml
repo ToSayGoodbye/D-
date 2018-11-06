@@ -1,0 +1,11 @@
+<!--pages/chenggong/chenggong.wxml-->
+<view class="container">
+  <view class="icon-box" style="text-align:center">
+    <icon class="icon-box-img" type="success" size="93"></icon>
+    <view class="icon-box-ctn">
+      <view class="icon-box-title">成功</view>
+      <view class="icon-box-desc">提现申请已提交</view>
+    </view>
+  </view>
+</view>
+<button type="primary" bindtap="queding" class="queding">确定</button>

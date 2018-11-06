@@ -1,0 +1,15 @@
+<!--pages/tixian/tixian.wxml-->
+<view class="page">
+  <view class="title">提现金额(余额{{balance}}元)</view>
+  <view class="page-section inpu flex-row" style="display: flex;">
+    <view class="flex-view-item">￥</view>
+    <view class="weui-cells weui-cells_after-title flex-view-item">
+          <input name="price" class="weui-input"  bindinput="ifChange" type="digit" placeholder=""/>
+    </view>
+  </view>
+  <view class="line"></view>
+  <view class="txbtn">
+    <button bindtap="tixian" type="primary">确认提现</button>
+  </view>
+</view>
+

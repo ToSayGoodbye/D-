@@ -88,6 +88,7 @@ Page({
        'openid': openId ,
        'phone': phone,
         info_id: that.data.oil.id,
+        infoNum: that.data.oil.infoNum,
         type: that.data.oil.type,
         shootNum: '3号枪',
         real_price: '1',

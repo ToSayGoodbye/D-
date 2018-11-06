@@ -4,7 +4,7 @@
     账户余额(元)
     <view class="qian">{{balance}}</view>
   </view>
-  <navigator  class="menu" url="../qianbao/qianbao?id={{infoNum}}">
+  <navigator  class="menu" url="../tixian/tixian?id={{infoNum}}&balance={{balance}}">
         <image class="navImage" src="../../resources/images/tixian.png"/>
         <text>提现</text>
     </navigator>
