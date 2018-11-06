@@ -1,6 +1,5 @@
 {
   "pages": [
-    
     "pages/home/home",
     "pages/oilSet/oilSet",
     "pages/index/index",
@@ -9,7 +8,8 @@
     "pages/logs/logs",
     "pages/help/help",
     "pages/orderList/orderList",
-    "pages/detail/detail"
+    "pages/detail/detail",
+    "pages/qianbao/qianbao"
   ],
   "window": {
     "backgroundTextStyle": "dark",

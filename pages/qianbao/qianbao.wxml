@@ -1,0 +1,13 @@
+<!--pages/qianbao/qianbao.wxml-->
+
+  <view class="top">
+    账户余额(元)
+    <view class="qian">{{balance}}</view>
+  </view>
+  <navigator  class="menu" url="../qianbao/qianbao?id={{infoNum}}">
+        <image class="navImage" src="../../resources/images/tixian.png"/>
+        <text>提现</text>
+    </navigator>
+
+
+

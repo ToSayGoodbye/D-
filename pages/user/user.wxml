@@ -9,9 +9,9 @@
               私家车车主
           </view>
     </view>
-    <navigator class="menu" url="../orderList/orderList">
-        <image class="navImage" src="../../resources/images/order.png"/>
-        <text>我的加油订单</text>
+    <navigator wx:if="{{infoNum!=0}}"  class="menu" url="../qianbao/qianbao?id={{infoNum}}">
+        <image class="navImage" src="../../resources/images/qianbao.png"/>
+        <text>我的钱包</text>
     </navigator>
     <navigator wx:if="{{infoNum!=0}}"  class="menu" url="../orderList/orderList?id={{infoNum}}">
         <image class="navImage" src="../../resources/images/oilDd.png"/>
@@ -20,6 +20,10 @@
      <navigator wx:if="{{infoNum!=0}}"  class="menu" url="../oilSet/oilSet?infoNum={{infoNum}}">
         <image class="navImage" src="../../resources/images/xiugai.png"/>
         <text>油站信息设置</text>
+    </navigator>
+    <navigator class="menu" url="../orderList/orderList">
+        <image class="navImage" src="../../resources/images/order.png"/>
+        <text>我的加油订单</text>
     </navigator>
     <navigator class="menu" url="../mycontent/mycontent?tab=0">
          <image class="navImage" src="../../resources/images/quan.png"/>

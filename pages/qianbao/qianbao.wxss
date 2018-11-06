@@ -1,0 +1,63 @@
+/* pages/qianbao/qianbao.wxss */
+.top{
+  height:142rpx;
+  background-color:rgb(231, 218, 33);
+  margin:10rpx;
+  padding:20rpx;
+  border-radius:20rpx;
+  font-size:26rpx;
+  margin-top:35rpx;
+}
+.qian{
+  font-weight:bold;
+  font-size:53rpx;
+  margin-top:15rpx;
+}
+.tixian{
+  position:relative;
+  left:568rpx;
+  top:-62rpx;
+}
+.navImage{
+    position:absolute;
+    width:36rpx;
+    height:36rpx;
+    left:37rpx;
+    top:20rpx;
+}
+
+.menu{
+  font-size: 29rpx;
+  color: rgb(97, 96, 96)
+}
+
+navigator{
+    position: relative;
+    margin-top: 30rpx;
+    padding:20rpx 60rpx 27rpx 90rpx;
+    height:34rpx;
+    line-height: 34rpx;
+    overflow: hidden;
+    background: #fff;
+}
+navigator:after{
+    position: absolute;
+	  content: "";
+    top: 50%;
+    right: 30rpx;
+    width: 12rpx;
+    height: 12rpx;
+    border-top: 1rpx solid rgb(247, 237, 237);
+    border-right: 1rpx solid #999;
+    transform:translate(0,-50%) rotate(45deg);
+}
+navigator:before{
+    position: absolute;
+    left:30rpx;
+    top:27rpx;
+    width: 30rpx;
+    height: 34rpx;
+    content:"";
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
