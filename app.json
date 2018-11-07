@@ -1,9 +1,6 @@
 {
   "pages": [
-    "pages/zhifu/zhifu",
     "pages/home/home",
-    "pages/chenggong/chenggong",
-    "pages/tixian/tixian",
     "pages/oilSet/oilSet",
     "pages/index/index",
     "pages/code/code",
