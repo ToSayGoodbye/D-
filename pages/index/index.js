@@ -31,46 +31,12 @@ Page({
 
     clicked: false,
     id: "",
-    markers: [{
-      id: '{"id":1,"name":"来往商贸","imgUrl":"","address":"北京市东城区东长安街","type":"0","price":"7.47","order_count":"1","distance":"8.4Km","latitude":"39.908823","longitude":"116.39747","shoots":"1,3,5,7,8,9","infoNum":"1"}',
-      latitude: 39.85856,
-      longitude: 116.28616,
-      width: 35,
-      height: 35,
-      iconPath: "/resources/images/jiayou.png",
-      callout: {
-        content: "来往商贸\n7.74/升",
-        color: "#000000",
-        fontSize: "16",
-        borderRadius: 10,
-        bgColor: "#ffffff",
-        padding: 3,
-        display: "ALWAYS",
-        textAlign: "center"
-      },
-    }, {
-        id: '{"id":2,"name":"中国石油","imgUrl":"","address":"北京市东城区东长安街","type":"0","price":"7.47","order_count":"1","distance":"11.0Km","latitude":"39.908823","longitude":"116.39747","shoots":"1,3,5,7,8,9","infoNum":"1"}',
-      latitude: 39.908823,
-      longitude: 116.39747,
-      width: 35,
-      height: 35,
-      iconPath: "/resources/images/jiayou.png",
-      callout: {
-        content: "中国石油\n7.74/升",
-        color: "#000000",
-        fontSize: "16",
-        borderRadius: 10,
-        bgColor: "#ffffff",
-        padding: 3,
-        display: "ALWAYS",
-        textAlign: "center"
-      },
-    }],
+    markers: [],
     item:""
   },
 
   markertap(e) {
-    var object = JSON.parse(e.markerId);
+    var object = e.markerId;
     this.setData({
       item: object,
       clicked: true,
@@ -189,6 +155,32 @@ Page({
         hasMore: more,
         hidden: true,
         querying:false
+      });
+      var oilList = that.data.oilList;
+      var markers = new Array();
+       for (var i = 0; i < oilList.length; i++){
+         var marker = new Object();
+         var callout = new Object();
+        marker.id = oilList[i];
+        marker.latitude = oilList[i].latitude;
+        marker.longitude = oilList[i].longitude;
+        marker.width = 35;
+        marker.height = 35;
+        marker.iconPath = "/resources/images/jiayou.png";
+         callout.content = oilList[i].name;
+         callout.color = "#000000";
+         callout.fontSize = "16";
+         callout.borderRadius = 10;
+         callout.bgColor = "#ffffff";
+         callout.padding = 3;
+         callout.display = "ALWAYS";
+         callout.textAlign = "center";
+        marker.callout = callout;
+        markers[i] = marker;
+      }
+      that.setData({
+        markers: markers,
+        clicked:false
       });
     });
   },

@@ -1,0 +1,39 @@
+/* pages/tixian/tixian.wxss */
+.inpu{
+  padding:20rpx
+}
+.line{
+  height:1px;
+  background-color:#8888;
+  margin-left:47rpx;
+  margin-right:47rpx;
+}
+.title{
+  margin-left:27rpx;
+  font-size:30rpx;
+  color:#8888;
+  margin-bottom:20rpx
+}
+.page{
+  padding-top:62rpx;
+}
+.txbtn{
+  padding:25rpx; 
+  padding-top:51rpx;
+}
+.num{
+  font-size:31rpx;
+  color:#888;
+  position:relative;
+  bottom:-24rpx;
+  width:140px;
+  text-align:right;
+}
+.price{
+  font-size:46rpx;
+  font-weight:bold;
+  width:300rpx;
+  position:relative;
+  left:-47rpx;
+
+}

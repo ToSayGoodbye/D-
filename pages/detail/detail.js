@@ -19,7 +19,7 @@ Page({
     tab:'0',
     navList: navList,
 
-    activeShootIndex:''
+    activeShootIndex:-1
   },
   /**
    * 根据type判断具体油型号
@@ -36,7 +36,8 @@ Page({
     var index = e.currentTarget.dataset.index;
     that.setData({
       activeIndex: index,
-      tab: tab
+      tab: tab,
+      activeShootIndex:-1
     });
     var url = '/selectOilById?infoNum=' + that.data.oil.infoNum + '&type=' + index
     util.req(url,null,function(res){
@@ -58,6 +59,10 @@ Page({
     that.setData({
       activeShootIndex: index
     });
+    var oil = JSON.stringify(that.data.oil);
+    wx.navigateTo({
+      url: '../zhifu/zhifu?oil=' + oil + '&shootIndex=' + index
+    })
   },
 
   //调用支付
