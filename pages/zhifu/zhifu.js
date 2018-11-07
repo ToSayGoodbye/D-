@@ -7,9 +7,10 @@ Page({
    */
   data: {
     oil:null,
-    jine:0,
+    jine:'',
     shootIndex:'',
-    num:0
+    num:0,
+    activePriceIndex:-1
   },
 
   /**
@@ -37,6 +38,19 @@ Page({
       jine: value,
       num: num.toFixed(2)
     })
+  },
+
+  onTapPrice: function (e) {
+    var that = this;
+    var index = e.currentTarget.dataset.index;
+    var value = e.currentTarget.dataset.price;
+    var price = 7.16;
+    var num = value / price;
+    that.setData({
+      activePriceIndex: index,
+      jine: value,
+      num: num.toFixed(2)
+    });
   },
 
   /**

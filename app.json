@@ -1,6 +1,5 @@
 {
   "pages": [
-    "pages/zhifu/zhifu",
     "pages/home/home",
     "pages/chenggong/chenggong",
     "pages/tixian/tixian",
@@ -12,7 +11,8 @@
     "pages/help/help",
     "pages/orderList/orderList",
     "pages/detail/detail",
-    "pages/qianbao/qianbao"
+    "pages/qianbao/qianbao",
+    "pages/zhifu/zhifu"
   ],
   "window": {
     "backgroundTextStyle": "dark",
