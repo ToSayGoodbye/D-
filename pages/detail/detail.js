@@ -14,34 +14,35 @@ Page({
    * 页面的初始数据
    */
   data: {
-    oil:null,
-    activeIndex:0,
-    tab:'0',
+    oil: null,
+    activeIndex: 0,
+    tab: '0',
     navList: navList,
 
-    activeShootIndex:''
+    activeShootIndex: -1
   },
   /**
    * 根据type判断具体油型号
    */
-  getType:function(e){
+  getType: function (e) {
     console.log(e);
   },
   /**
    * 选择枪事件
    */
-  onTapTag:function(e){
+  onTapTag: function (e) {
     var that = this;
     var tab = e.currentTarget.id;
     var index = e.currentTarget.dataset.index;
     that.setData({
       activeIndex: index,
-      tab: tab
+      tab: tab,
+      activeShootIndex: -1
     });
     var url = '/selectOilById?infoNum=' + that.data.oil.infoNum + '&type=' + index
-    util.req(url,null,function(res){
+    util.req(url, null, function (res) {
       var distance = that.data.oil.distance;//复用距离
-      
+
       var oil = res.data.data;
       var shoots = oil.shoots.split(',');
       oil.distance = distance;
@@ -58,6 +59,10 @@ Page({
     that.setData({
       activeShootIndex: index
     });
+    var oil = JSON.stringify(that.data.oil);
+    wx.navigateTo({
+      url: '../zhifu/zhifu?oil=' + oil + '&shootIndex=' + index
+    })
   },
 
   //调用支付
@@ -73,7 +78,7 @@ Page({
   getOpenId: function (code) {
     var that = this;
     var url = "/getOpenid"
-    util.req(url, {js_code: code}, function (res) {
+    util.req(url, { js_code: code }, function (res) {
       var openId = res.data;
       that.xiadan(openId);
     })
@@ -83,17 +88,17 @@ Page({
     console.log(openId);
     var that = this;
     var url = "/wxPay"
-    var phone = wx.getStorageSync('doudingphone'); 
+    var phone = wx.getStorageSync('doudingphone');
     util.req(url, {
-       'openid': openId ,
-       'phone': phone,
-        info_id: that.data.oil.id,
-        infoNum: that.data.oil.infoNum,
-        type: that.data.oil.type,
-        shootNum: '3号枪',
-        real_price: '1',
-        save_price: '20'
-       }, function (res) {
+      'openid': openId,
+      'phone': phone,
+      info_id: that.data.oil.id,
+      infoNum: that.data.oil.infoNum,
+      type: that.data.oil.type,
+      shootNum: '3号枪',
+      real_price: '1',
+      save_price: '20'
+    }, function (res) {
       that.requestPayment(res.data);
     })
   },

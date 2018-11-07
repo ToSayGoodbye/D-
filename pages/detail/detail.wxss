@@ -19,6 +19,9 @@
   border-radius:20rpx;
   width:121rpx;
   text-align:center;
+  color:rgb(100, 100, 100);
+  height:74rpx;
+  padding-top:31rpx;
 }
 .oilTitle{
   height: 300rpx;
@@ -31,15 +34,18 @@
 .sort-item{
     width:96rpx;
     height:58rpx;
-    color: #545454;
     font-size:13px;
     text-align: center;
     padding-top:13px;
     font-weight:bold;
+    color:#888;
 }
 .sort-item.on{
     color: #db3652;
     border-bottom: 2px solid #db3652;
+    height:65rpx;
+    font-size:30rpx;
+    line-height:35rpx;
 }
 
 .sort-item.comb{
@@ -47,7 +53,8 @@
     flex-direction: row;
 }
 .shootOn{
-  background-color:rgb(240, 246, 247);
+  background-color:#db3652;
+  color:#fff
 }
 .sort-panel{
     width:100%;

@@ -53,5 +53,13 @@
      </block>
     </view>
 
+     <view wx:if="{{oil.shoots.length>7}}" class="flex-row shoots" style="display: flex;">
+     <block wx:for="{{oil.shoots}}" wx:key="key">
+      <view wx:if="{{index<=11 && index>=7}}" catchtap="onTapShoot" data-index="{{index}}" class="flex-view-item shoot {{index == activeShootIndex ? 'shootOn' : ''}}">
+        {{item}}号枪
+      </view>
+     </block>
+    </view>
+
     <button type="primary" bindtap='toPay'>立即支付</button>
 </view>
