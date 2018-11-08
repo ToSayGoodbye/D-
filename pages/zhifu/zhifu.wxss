@@ -8,6 +8,10 @@
   margin-left:47rpx;
   margin-right:47rpx;
 }
+.allLine{
+    height:1px;
+    background-color:#8888;
+}
 .title{
   margin-left:27rpx;
   font-size:30rpx;
@@ -42,6 +46,14 @@
   width:100%;
   justify-content:  space-around;
 }
+.youhui{
+  width:95%;
+  justify-content:space-between;
+  padding:20rpx;
+}
+.redPrice{
+  color:rgb(248, 125, 24)
+}
 
 .shoot{
   padding:15rpx;
@@ -60,4 +72,15 @@
   position:relative;
   top:17rpx;
   text-align:right;
+}
+.txbtn{
+  position: absolute;
+  bottom:0rpx;
+  width:91%
+}
+.shifu{
+  text-align: center;
+}
+.shifu span{
+  color:rgb(248, 125, 24)
 }

@@ -25,8 +25,26 @@
     300
     </view>
   </view>
+    <view class="youhui flex-row"  style="display: flex;margin-top:20rpx">
+      <view  class="flex-view-item">
+      豆丁特权优惠
+      </view>
+      <view  class="flex-view-item redPrice">
+      -5.67
+      </view>
+    </view>
+  <view class="allLine" ></view>
+   <view class="youhui flex-row"  style="display: flex;">
+      <view  class="flex-view-item">
+      实付金额
+      </view>
+      <view  class="flex-view-item redPrice">
+      ￥95.25
+      </view>
+    </view>
+    <view class="allLine" ></view>
   <view class="txbtn">
-    <button bindtap="tixian" type="primary">立即支付</button>
+    <button bindtap="tixian" style="background-color: rgb(248, 125, 24);" type="primary">立即支付</button>
   </view>
 </view>
 
