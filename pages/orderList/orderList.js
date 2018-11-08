@@ -21,13 +21,17 @@ Page({
   },
   onLoad: function (options) {
     var that = this;
+    var oilId = options.id;
+    if (typeof (oilId) == 'undefined') {
+      oilId = 'undefined';
+    }
     //获取位置
     wx.getLocation({
       success: function (e) {
         that.setData({
           latitude: e.latitude,
           longitude: e.longitude,
-          oilId: options.id
+          oilId: oilId
         });
         that.getData();
       }
