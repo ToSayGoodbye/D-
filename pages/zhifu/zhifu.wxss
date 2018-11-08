@@ -1,86 +1,117 @@
 /* pages/tixian/tixian.wxss */
-.inpu{
-  padding:20rpx
-}
-.line{
-  height:1px;
-  background-color:#8888;
-  margin-left:47rpx;
-  margin-right:47rpx;
-}
-.allLine{
-    height:1px;
-    background-color:#8888;
-}
-.title{
-  margin-left:27rpx;
-  font-size:30rpx;
-  color:#8888;
-  margin-bottom:20rpx
-}
-.page{
-  padding-top:62rpx;
-}
-.txbtn{
-  padding:25rpx; 
-  padding-top:51rpx;
-}
-.num{
-  font-size:31rpx;
-  color:#888;
-  position:absolute;
-  top:172rpx;
-  width:140px;
-  text-align:right;
-  right:16rpx;
-}
-.price{
-  font-size:46rpx;
-  font-weight:bold;
-  width:300rpx;
-  position:relative;
-  top:16rpx;
+
+page {
+        background: #efeff4;
+        width: 100%;
+        height: 100%;
 }
 
-.shoots{
-  width:100%;
-  justify-content:  space-around;
-}
-.youhui{
-  width:95%;
-  justify-content:space-between;
-  padding:20rpx;
-}
-.redPrice{
-  color:rgb(248, 125, 24)
+.inpu {
+        padding: 20rpx;
+        background: #fff;
 }
 
-.shoot{
-  padding:15rpx;
-  border:3rpx solid;
-  margin:18rpx;
-  border-radius:20rpx;
-  width:121rpx;
-  text-align:center;
-  color:rgb(100, 100, 100);
-  height:56rpx;
+.line {
+        height: 1px;
+        background-color: #8888;
 }
-.biaozhi{
-  font-size:40rpx;
-  width:48rpx;
-  font-weight:bold;
-  position:relative;
-  top:17rpx;
-  text-align:right;
+
+.jinequ {
+        margin-top: 5rpx;
+        background: #fff;
 }
-.txbtn{
-  position: absolute;
-  bottom:0rpx;
-  width:91%
+
+.allLine {
+        height: 1px;
+        background-color: #8888;
 }
-.shifu{
-  text-align: center;
+
+.title {
+        padding-top: 62rpx;
+        padding-left: 27rpx;
+        font-size: 30rpx;
+        width: 100%;
+        color: #666;
+        padding-bottom: 20rpx;
+        background: #fff;
 }
-.shifu span{
-  color:rgb(248, 125, 24)
+
+.txbtn {
+        padding: 25rpx;
+        padding-top: 51rpx;
+}
+
+.num {
+        font-size: 31rpx;
+        color: #333;
+        position: absolute;
+        top: 172rpx;
+        width: 140px;
+        text-align: right;
+        right: 16rpx;
+}
+
+.price {
+        font-size: 46rpx;
+        font-weight: bold;
+        width: 300rpx;
+        position: relative;
+        top: 16rpx;
+}
+
+.shoots {
+        width: 100%;
+        justify-content: space-around;
+        background: #fff;
+}
+
+.youhui {
+        width: 95%;
+        justify-content: space-between;
+        padding: 20rpx;
+}
+
+.redPrice {
+        color: rgb(248, 125, 24);
+}
+
+.shoot {
+        border: 1px solid #666;
+        margin: 18rpx;
+        border-radius: 20rpx;
+        width: 121rpx;
+
+        text-align: center;
+        color: rgb(100, 100, 100);
+        height: 59rpx;
+        padding:10rpx;
+        line-height:59rpx;
+
+}
+
+.biaozhi {
+        font-size: 40rpx;
+        width: 48rpx;
+        font-weight: bold;
+        position: relative;
+        top: 17rpx;
+        text-align: right;
+}
+
+.txbtn {
+        position: absolute;
+        bottom: 0rpx;
+        width: 91%;
+}
+
+.shifu {
+        text-align: center;
+}
+
+.shifu span {
+        color: rgb(248, 125, 24);
+}
+
+.jinespan {
+        color: #666;
 }

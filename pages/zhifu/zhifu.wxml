@@ -1,10 +1,10 @@
 <!--pages/tixian/tixian.wxml-->
 <view class="page">
-  <view class="title">请输入加油金额(机显)</view>
+  <view class="title">请选择支付金额(机显)</view>
   <view class="page-section inpu flex-row" style="display: flex;justify-content:flex-start">
     <view class="flex-view-item biaozhi">￥</view>
     <view class="weui-cells weui-cells_after-title flex-view-item price">
-          <input name="price" class="weui-input"  bindinput="ifChange" type="digit" placeholder="" focus="true" value="{{jine}}"/>
+          <input name="price" class="weui-input"  bindinput="ifChange" type="digit" placeholder="" focus="true" value="{{jine}}" maxlength='9'/>
     </view>
      <view class="flex-view-item num">
           约{{num}}L
@@ -13,36 +13,38 @@
   <view class="line"></view>
    <view class="flex-row shoots" style="display: flex;">
     <view catchtap="onTapPrice" data-index="0"  data-price="100" class="flex-view-item shoot {{0 == activePriceIndex ? 'shootOn' : ''}}">
-    100
+    100元
     </view>
     <view catchtap="onTapPrice"  data-index="1" data-price="150" class="flex-view-item shoot {{1 == activePriceIndex ? 'shootOn' : ''}}">
-    150
+    150元
     </view>
     <view catchtap="onTapPrice" data-index="2" data-price="200" class="flex-view-item shoot {{2 == activePriceIndex ? 'shootOn' : ''}}">
-    200
+    200元
     </view>
     <view catchtap="onTapPrice" data-index="3"  data-price="300" class="flex-view-item shoot {{3 == activePriceIndex ? 'shootOn' : ''}}">
-    300
+    300元
     </view>
   </view>
-    <view class="youhui flex-row"  style="display: flex;margin-top:20rpx">
-      <view  class="flex-view-item">
+    <view class='jinequ'>
+        <view class="youhui flex-row"  style="display: flex;margin-top:20rpx">
+      <view  class="flex-view-item jinespan">
       豆丁特权优惠
       </view>
       <view  class="flex-view-item redPrice">
       -5.67
       </view>
     </view>
-  <view class="allLine" ></view>
+  <!-- <view class="allLine" ></view> -->
    <view class="youhui flex-row"  style="display: flex;">
-      <view  class="flex-view-item">
+      <view  class="flex-view-item jinespan">
       实付金额
       </view>
       <view  class="flex-view-item redPrice">
       ￥95.25
       </view>
     </view>
-    <view class="allLine" ></view>
+    <!-- <view class="allLine" ></view> -->
+    </view>
   <view class="txbtn">
     <button bindtap="tixian" style="background-color: rgb(248, 125, 24);" type="primary">立即支付</button>
   </view>
