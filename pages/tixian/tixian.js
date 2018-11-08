@@ -71,7 +71,7 @@ Page({
          icon: 'success',
          duration: 800
        })
-       wx.navigateTo({
+       wx.redirectTo({
          url: '../chenggong/chenggong'
        }) 
      }

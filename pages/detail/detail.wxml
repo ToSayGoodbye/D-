@@ -61,5 +61,5 @@
      </block>
     </view>
 
-    <button type="primary" bindtap='toPay'>立即支付</button>
+    <!-- <button type="primary" bindtap='toPay'>立即支付</button> -->
 </view>

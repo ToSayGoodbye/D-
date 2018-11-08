@@ -1,0 +1,15 @@
+<!--pages/chenggong/chenggong.wxml-->
+<view class="container">
+  <view class="icon-box" style="text-align:center">
+    <icon class="icon-box-img" type="success" size="93"></icon>
+    <view class="icon-box-ctn">
+      <view class="icon-box-title">支付成功</view>
+      <view class="icon-box-desc">油站:{{oilName}}</view>
+      <view class="icon-box-desc">油枪:{{shootNum}}号枪</view>
+      <view class="icon-box-desc">时间:{{shijian}}</view>
+      <view class="icon-box-desc">实付金额:{{shifu}}</view>
+      <view class="icon-box-desc">优惠金额:{{youhui}}</view>
+    </view>
+  </view>
+</view>
+<button type="primary" bindtap="queding" class="queding">确定</button>
