@@ -1,0 +1,15 @@
+/* pages/chenggong/chenggong.wxss */
+
+
+.icon-box-title{
+  font-size: 34rpx;
+}
+.icon-box-desc{
+  margin-top: 12rpx;
+  font-size: 26rpx;
+  color: #888;
+}
+.queding{
+  margin:30rpx;
+  margin-top:-97rpx;
+}

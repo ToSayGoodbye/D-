@@ -40,6 +40,16 @@ Page({
   },
 
   /**
+   * 去提现
+   */
+  toTixian:function(){
+    wx.redirectTo({
+      url: '../tixian/tixian?id='+this.data.infoNum +
+        '&balance=' + this.data.balance
+    })
+  },
+
+  /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {

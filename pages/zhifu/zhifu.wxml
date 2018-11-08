@@ -31,7 +31,7 @@
       豆丁特权优惠
       </view>
       <view  class="flex-view-item redPrice">
-      -5.67
+      -{{youhui}}元
       </view>
     </view>
   <!-- <view class="allLine" ></view> -->
@@ -40,13 +40,13 @@
       实付金额
       </view>
       <view  class="flex-view-item redPrice">
-      ￥95.25
+      {{shifu}}元
       </view>
     </view>
     <!-- <view class="allLine" ></view> -->
     </view>
   <view class="txbtn">
-    <button bindtap="tixian" style="background-color: rgb(248, 125, 24);" type="primary">立即支付</button>
+    <button bindtap="toPay" style="background-color: rgb(248, 125, 24);" type="primary">立即支付</button>
   </view>
 </view>
 

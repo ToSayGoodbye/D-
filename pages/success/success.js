@@ -5,14 +5,31 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+      oilName:'',
+      shootNum:'',     
+      shijian:'',
+      shifu: '',
+      youhui:''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var that = this;
+    var oilName = options.oilName;
+    var shootNum = options.shootNum;
+    var shijian = new Date().toLocaleString();
+    var shifu = options.shifu;
+    var youhui = options.youhui;
+  
+    that.setData({
+      oilName: oilName,
+      shootNum: shootNum,
+      shijian: shijian,
+      shifu: shifu,
+      youhui: youhui
+    });
   },
   queding:function(){
     wx.reLaunch({
