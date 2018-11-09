@@ -76,7 +76,7 @@ page {
 }
 
 .shoot {
-        border: 1px solid #666;
+        border: 1rpx solid #666;
         margin: 18rpx;
         border-radius: 20rpx;
         width: 121rpx;
@@ -88,7 +88,10 @@ page {
         line-height:59rpx;
 
 }
-
+.shootOn{
+    color: #ee6b2b;
+    border: 1px solid #ee6b2b;
+}
 .biaozhi {
         font-size: 40rpx;
         width: 48rpx;

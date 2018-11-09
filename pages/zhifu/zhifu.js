@@ -38,8 +38,10 @@ Page({
     var num = value/price;
     that.setData({
       jine: value,
-      num: num.toFixed(2)
+      num: num.toFixed(2),
+      activePriceIndex:'-1'
     })
+    
     that.getYouhui();
   },
 
