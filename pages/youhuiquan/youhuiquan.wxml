@@ -1,0 +1,5 @@
+<!--pages/youhuiquan/youhuiquan.wxml-->
+<view class="container">
+  <image class="imgView" src='/resources/images/noQuan.png'></image>
+  <view class="title">暂无优惠券</view>
+</view>

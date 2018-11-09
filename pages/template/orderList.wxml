@@ -1,12 +1,16 @@
 <!-- orderList.wxml -->
 <template name="orderItem">
-  <view class="listItme">
-    <text class="name">{{item.name}}</text>
-      <view class="flex-row" style="display: block;">
+  <view class="listItme flex-row" style="display: flex;">
+      <view class="flex-row flex-view-item" style="display: block;">
+        <view class="flex-view-item">{{item.name}}</view>
         <view class="flex-view-item">{{item.time_end}}</view>
-        <view class="flex-view-item">{{item.real_price}}元</view>
+      </view>
+      
+      <view class="flex-view-item itmeView" style="display: block;">
+        <view class="flex-view-item itmePrice">￥{{item.real_price}}</view>
       </view>
   </view>
+  <view class="lline"></view>
 </template>
 
 <template name="orderList">

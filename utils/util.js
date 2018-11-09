@@ -39,9 +39,29 @@ function reqp(url, data, callback) {
     }
   })
 }
+/**
+ * 封装loadding
+ */
+function loading() {
+  wx.showToast({
+    title: "加载中",
+    duration:200000,
+    mask: true,
+    icon: "loading"
+  });
+};
+
+/**
+ * 封装hideLoading
+ */
+function hideLoading() {
+  wx.hideToast();
+};
  
 module.exports = {
   formatTime: formatTime,
   req: req,
-  reqp: reqp
+  reqp: reqp,
+  loading: loading,
+  hideLoading: hideLoading
 }

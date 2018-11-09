@@ -213,7 +213,7 @@ Page({
       longitude: Number(oil.longitude),
       name: oil.name,
       address: oil.address,
-      scale: 8
+      scale: 11
     })
   }
 })

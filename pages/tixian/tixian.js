@@ -37,19 +37,20 @@ Page({
     console.log('balance==' + balance);
     if(jine ==  0||jine == ''){
       wx.showToast({
-        title: '尚未输入提现金额',
+        title: '请输入提现金额',
         icon: 'none',
         duration: 800
       })
       return
     }
-    if(jine<0){
+    var a = /^[0-9]*(\.[0-9]*)?$/;
+    if (!a.test(jine)) {
       wx.showToast({
-        title: '小于0',
+        title: '请输入正确金额',
         icon: 'none',
         duration: 800
       })
-      return
+      return;
     }
     if (jine > Number(balance)){
       wx.showToast({

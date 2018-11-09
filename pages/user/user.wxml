@@ -25,11 +25,11 @@
         <image class="navImage" src="../../resources/images/order.png"/>
         <text>我的加油订单</text>
     </navigator>
-    <navigator class="menu" url="../mycontent/mycontent?tab=0">
+    <navigator class="menu" url="../youhuiquan/youhuiquan?tab=0">
          <image class="navImage" src="../../resources/images/quan.png"/>
         <text>我的优惠券</text>
     </navigator>
-    <navigator class="menu" url="../mycontent/mycontent?tab=0">
+    <navigator class="menu" bindtap='logout' url="../mycontent/mycontent?tab=0">
          <image class="navImage" src="../../resources/images/out.png"/>
         <text>退出登录</text>
     </navigator>

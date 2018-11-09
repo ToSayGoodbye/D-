@@ -34,7 +34,8 @@ Page({
   ifChange:function(e){
     var value = e.detail.value;
     var that =this;
-    var price = 7.16;
+    var oil = that.data.oil;
+    var price = oil.price;
     var num = value/price;
     that.setData({
       jine: value,
@@ -49,7 +50,8 @@ Page({
     var that = this;
     var index = e.currentTarget.dataset.index;
     var value = e.currentTarget.dataset.price;
-    var price = 7.16;
+    var oil = that.data.oil;
+    var price = oil.price;
     var num = value / price;
     that.setData({
       activePriceIndex: index,
@@ -64,7 +66,8 @@ Page({
   getYouhui:function(){
     var that = this;
     var num = that.data.num;
-    var savePrice = 0.2;
+    var oil = that.data.oil;
+    var savePrice = oil.savePrice;
     var youhui = num * savePrice;
     var shifu = that.data.jine - youhui;
     that.setData({
@@ -124,6 +127,26 @@ Page({
   //调用支付
   toPay: function (e) {
     var that = this;
+    var jine = that.data.jine;
+    if (jine == 0 || jine == '') {
+      wx.showToast({
+        title: '请输入正确金额',
+        icon: 'none',
+        duration: 800
+      })
+      return
+    }
+    var a = /^[0-9]+(\.[0-9]*)?$/;
+    if (!a.test(jine)) {
+      wx.showToast({
+        title: '请输入正确金额',
+        icon: 'none',
+        duration: 800
+      })
+      return;
+    }
+    util.loading();
+    var that = this;
     var index = that.data.shootIndex;
     
     wx.login({
@@ -164,6 +187,7 @@ Page({
   requestPayment: function (obj) {
     var that = this;
     console.log(obj);
+    util.hideLoading();
     wx.requestPayment({
       'timeStamp': obj.timeStamp,
       'nonceStr': obj.nonceStr,
@@ -174,7 +198,7 @@ Page({
         if (res.errMsg == "requestPayment:ok"){
           wx.redirectTo({
             url: '../success/success?oilName=' + that.data.oil.name + '&shootNum=' +
-              that.data.oil.shoots[index] + '&jine=' + that.data.jine +
+              that.data.oil.shoots[that.data.shootIndex] + '&jine=' + that.data.jine +
               '&youhui=' + that.data.youhui + '&shifu=' + that.data.shifu
           })  
         }
