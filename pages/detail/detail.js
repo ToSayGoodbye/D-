@@ -27,6 +27,22 @@ Page({
   getType: function (e) {
     console.log(e);
   },
+
+  /**
+   * 导航
+   */
+  daoHang: function (e) {
+    var oil = e.currentTarget.dataset.oil;
+    console.log(oil);
+    wx.openLocation({
+      latitude: Number(oil.latitude),
+      longitude: Number(oil.longitude),
+      name: oil.name,
+      address: oil.address,
+      scale: 8
+    })
+  },
+
   /**
    * 选择枪事件
    */
