@@ -151,7 +151,7 @@ Page({
       info_id: that.data.oil.id,
       infoNum: that.data.oil.infoNum,
       type: that.data.oil.type,
-      shootNum: that.data.oil.shoots[that.data.shootIndex],
+      shootNum: that.data.oil.shoots[that.data.shootIndex]+'号枪',
       real_price: that.data.shifu,
       save_price: that.data.youhui
     }, function (res) {
