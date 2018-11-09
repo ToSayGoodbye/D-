@@ -7,6 +7,10 @@ page{
     height: 1rpx;
     background-color:rgba(190, 184, 184, 0.466);
 }
+.yuexiao{
+  width:145rpx;
+  margin-right:-16rpx;
+}
 .listMap{
   width:100%;
   position:fixed;
@@ -169,7 +173,10 @@ page{
   float: right;
   color:#888;
   font-size:25rpx;
-  text-align: right
+  text-align:center;
+  width:138rpx;
+  margin-right:-10rpx;
+
 }
 .price{
   margin-top: 3%;

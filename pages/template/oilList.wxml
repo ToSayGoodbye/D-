@@ -8,8 +8,8 @@
 
      <view class="flex-row flex-middle" style="display: block;">
         <view class="flex-view-item name">
-            {{item.name}} 
-            <span class="yuexiao">月销300单</span>
+             <span class="itname">{{item.name}} </span>
+            <span class="yuexiao" style=" text-align:center;">已售{{item.order_count}}单</span>
         </view>
         <view class="flex-view-item address">{{item.address}}</view>
         <view class="flex-view-item price">￥{{item.price}}</view>

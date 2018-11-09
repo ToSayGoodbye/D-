@@ -29,24 +29,31 @@
         <view class="titleDown flex-row">
               <view class="flex-view-item">
                 <view class="type">{{tool.getType(oil.type)}}</view>
-                <view class="price">￥{{oil.price}}</view>
+                <view class="price">￥{{doudingPrice}}</view>
               </view>
               <view class="flex-view-item flex-row saveView">
                 <view class="flex-view-item">
                   <view class="titT">比市场价</view>
-                  <view class="titD">省0.05元</view>
+                  <view class="titD">省{{marketSavePrice}}元</view>
                 </view>
                 <view class="flex-view-item" class="lline"></view>
                 <view class="flex-view-item">
                   <view class="titT">比油站价</view>
-                  <view class="titD">省0.25元</view>
+                  <view class="titD">省{{oil.savePrice }}元</view>
                 </view>
           </view>
         </view>
     </view>
     <view class="bottomView">
-        <import src="../template/nav.wxml"/>
-        <template is="nav" data="{{ navList, activeIndex }}"/>
+        <!-- <import src="../template/nav.wxml"/>
+        <template is="nav" data="{{ navList, activeIndex }}"/> -->
+    <view class="sort-panel">
+      <block wx:for="{{navList}}" wx:key="">
+        <view id="{{item.type}}" data-index="{{index}}"
+              class="sort-item {{index == activeIndex ? 'comb on' : ''}}"
+              catchtap="onTapTag">{{tool.getType(item.type+'')}}</view>
+      </block>
+    </view>
 
         <view wx:if="{{oil.shoots.length>1}}" class="flex-row shoots" style="display: flex;">
         <block wx:for="{{oil.shoots}}" wx:key="key">

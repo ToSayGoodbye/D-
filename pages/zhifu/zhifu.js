@@ -123,11 +123,7 @@ Page({
   toPay: function (e) {
     var that = this;
     var index = that.data.shootIndex;
-    wx.redirectTo({
-      url: '../success/success?oilName='+that.data.oil.name+'&shootNum='+
-        that.data.oil.shoots[index]+'&jine='+that.data.jine+
-        '&youhui='+that.data.youhui+'&shifu='+that.data.shifu
-    }) 
+    
     wx.login({
       success: function (res) {
         that.getOpenId(res.code);
@@ -164,6 +160,7 @@ Page({
   },
   //申请支付
   requestPayment: function (obj) {
+    var that = this;
     console.log(obj);
     wx.requestPayment({
       'timeStamp': obj.timeStamp,
@@ -174,8 +171,10 @@ Page({
       'success': function (res) {
         if (res.errMsg == "requestPayment:ok"){
           wx.redirectTo({
-            url: '../success/success'
-          }) 
+            url: '../success/success?oilName=' + that.data.oil.name + '&shootNum=' +
+              that.data.oil.shoots[index] + '&jine=' + that.data.jine +
+              '&youhui=' + that.data.youhui + '&shifu=' + that.data.shifu
+          })  
         }
       },
       'fail': function (res) {

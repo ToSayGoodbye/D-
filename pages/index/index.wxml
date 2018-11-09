@@ -52,7 +52,7 @@
                 <cover-view class="flex-row flex-middle2" style="display: block;">
                     <cover-view class="flex-view-item name">
                         {{item.name}} 
-                        <cover-view class="yuexiao2">月销300单</cover-view>
+                        <cover-view class="yuexiao2" style="text-align:center">已售{{item.order_count}}单</cover-view>
                     </cover-view>
                     <cover-view class="flex-view-item address">{{item.address}}</cover-view>
                     <cover-view class="flex-view-item price">￥{{item.price}}</cover-view>

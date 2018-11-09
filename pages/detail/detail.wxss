@@ -61,7 +61,7 @@ page{
   margin-top:-60rpx;
 }
 .sort-item{
-    width:96rpx;
+    width:149rpx;
     height:58rpx;
     font-size:13px;
     text-align: center;
@@ -89,7 +89,7 @@ page{
   border-radius:50%;
   background:rgb(77, 107, 255);
   position:relative;
-  right:-19rpx;
+  right:10rpx;
   top:3rpx;
 }
 .juli{

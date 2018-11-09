@@ -1,13 +1,19 @@
 var getType = function (a) {
   switch(a){
     case '0':
-      return '92#'; 
+      return '92#(93#)'; 
       break;
     case '1':
-      return '93#'; 
+      return '95#(97#)'; 
       break;
     case '2':
-      return '95#';
+      return '98#';
+      break;
+    case '3':
+      return '0#柴油';
+      break;
+    case '4':
+      return '-10#柴油';
       break;
   }
 }
