@@ -1,4 +1,5 @@
 // pages/home/home.js
+var util = require('../../utils/util.js');
 var app = getApp();
 Page({
 
@@ -93,15 +94,12 @@ Page({
       })
       return
     }
-
-    wx.setStorageSync('doudingphone', phone);
-    wx.setStorageSync('doudingcoo1kieid', phone);
-    wx.setStorageSync('doudinginfoNum', 1);
-    app.globalData.phone = phone
-    app.globalData.cookieid = phone
     wx.navigateTo({
       url: '../code/code?phone=' + phone
     })
+    var url = '/getCode?phone=' + phone;
+    util.req(url, null, function (res) {})
+   
   },
   clearValue: function () {
     wx.removeStorage('cookieid');

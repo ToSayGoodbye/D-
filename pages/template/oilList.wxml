@@ -1,4 +1,5 @@
 <!-- oilList.wxml -->
+<wxs src="../../resources/tools/tool.wxs" module="tool" />
 <template name="oilItem">
   <view class="allItem">
     <view bindtap="toDetail" data-oil="{{item}}" class="listItme flex-row" style="display: flex;">
@@ -12,7 +13,10 @@
             <span class="yuexiao" style=" text-align:center;">已售{{item.order_count}}单</span>
         </view>
         <view class="flex-view-item address">{{item.address}}</view>
-        <view class="flex-view-item price">￥{{item.price}}</view>
+        <view class="flex-view-item price">
+          ￥{{tool.getPrice(item)}}
+          <span class="jiangjia">已降价{{item.savePrice}}</span>
+        </view>
       </view>
     </view>
 

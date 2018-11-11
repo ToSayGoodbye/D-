@@ -8,7 +8,7 @@ Page({
     hasMore: true,
     hidden: true,
     page: 1,
-    pagesize: 10,
+    pagesize: 20,
     type: 0,
     order: 1,
     querying: false,

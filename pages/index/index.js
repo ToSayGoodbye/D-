@@ -113,6 +113,14 @@ Page({
   bindViewTap: function () {
 
   },
+  onPullDownRefresh:function(){
+    var that = this;
+    that.setData({
+      page:1
+    })
+    that.getData();
+    wx.stopPullDownRefresh();
+  },
   onLoad: function () {
     var that = this;
     //获取位置
@@ -133,7 +141,6 @@ Page({
 
     if (that.data.page == 1) {
       that.setData({
-        oilList: [],
         hidden: false,
         hasMore: true
       });
@@ -149,9 +156,15 @@ Page({
       if (length == 0 || (length < that.data.pagesize)) {
         more = false;
       }
+      var resultList = [];
+      if (that.data.page == 2) {
+        resultList = list;
+      }else{
+        resultList = that.data.oilList.concat(list);
+      }
 
       that.setData({
-        oilList: that.data.oilList.concat(list),
+        oilList: resultList,
         hasMore: more,
         hidden: true,
         querying: false

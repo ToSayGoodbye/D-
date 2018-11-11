@@ -17,4 +17,8 @@ var getType = function (a) {
       break;
   }
 }
-module.exports = { getType: getType };
+var getPrice = function (oil) {
+  var price = (oil.price - oil.savePrice).toFixed(2);
+  return price;
+}
+module.exports = { getType: getType, getPrice: getPrice};

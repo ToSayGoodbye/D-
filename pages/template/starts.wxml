@@ -12,5 +12,8 @@
       <!-- 右边的成绩，看得出来和上面的星星是左右布局的 -->  
       <text class="rankscore">{{starScore}}</text>  
     </view>
+     <view class="flex-view-item">
+      <text class="xiaoliang">(已售{{oil.order_count}}单)</text>  
+    </view>
   </view>
 </template>

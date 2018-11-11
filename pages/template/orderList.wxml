@@ -1,8 +1,12 @@
 <!-- orderList.wxml -->
 <template name="orderItem">
   <view class="listItme flex-row" style="display: flex;">
-      <view class="flex-row flex-view-item" style="display: block;">
-        <view class="flex-view-item">{{item.name}}</view>
+      <view class="flex-view-item" style="display: block;">
+        <image class="imgView" src="/resources/images/orderw.png"></image>
+      </view>
+      <view class="flex-row flex-view-item" style="display: block;margin-left:-45rpx;">
+        <view wx:if="{{oilId=='undefined'}}" class="flex-view-item">{{item.name}}</view>
+        <view wx:else class="flex-view-item phone">{{item.phone}}</view>
         <view class="flex-view-item">{{item.time_end}}</view>
       </view>
       
@@ -15,6 +19,6 @@
 
 <template name="orderList">
     <block wx:for="{{orderList}}">
-        <template is="orderItem" data="{{index:index,item:item}}"/>
+        <template is="orderItem" data="{{index:index,item:item,oilId:oilId}}"/>
     </block>
 </template>

@@ -12,8 +12,9 @@
     "pages/orderList/orderList",
     "pages/detail/detail",
     "pages/qianbao/qianbao",
-        "pages/zhifu/zhifu"
-   
+    "pages/zhifu/zhifu",
+    "pages/success/success",
+    "pages/youhuiquan/youhuiquan"
   ],
   "window": {
     "backgroundTextStyle": "dark",
@@ -34,13 +35,7 @@
         "selectedIconPath": "resources/images/home_selected.png"
       },
       {
-        "text": "帮助",
-        "pagePath": "pages/help/help",
-        "iconPath": "resources/images/help.png",
-        "selectedIconPath": "resources/images/help_selected.png"
-      },
-      {
-        "text": "我",
+        "text": "我的",
         "pagePath": "pages/user/user",
         "iconPath": "resources/images/me.png",
         "selectedIconPath": "resources/images/me_selected.png"

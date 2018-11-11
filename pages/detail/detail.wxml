@@ -23,7 +23,7 @@
         </view>
 
         <view class="stars">
-          <template is="starts" data="{{starScore:9}}"></template>
+          <template is="starts" data="{{starScore:9,oil:oil}}"></template>
         </view>
         
         <view class="titleDown flex-row">

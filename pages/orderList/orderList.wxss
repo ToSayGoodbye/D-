@@ -11,15 +11,23 @@ page{
     align-items:ab;
 }
 .listItme{
-  height: 105rpx;
-  background-color: #fff;
+  height:75rpx;
+  background-color:#fff;
   padding:18rpx;
   color:#888;
-justify-content:space-around;
+  justify-content:space-around;
+  font-size:30rpx;
 
 }
 .itmePrice{
-  line-height:108rpx;
+  line-height:79rpx;
+}
+.imgView{
+  width:67rpx;
+  height: 67rpx
+}
+.phone{
+  padding-bottom:5rpx;
 }
 .itmeView{
   width:121rpx;

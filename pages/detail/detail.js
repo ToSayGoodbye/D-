@@ -94,7 +94,8 @@ Page({
     this.setData({
       oil: oil,
       doudingPrice: doudingPrice,
-      marketSavePrice: marketSavePrice
+      marketSavePrice: marketSavePrice,
+      activeIndex: oil.type
     })
     var infoNum = oil.infoNum;
     var url = '/queryOilTypes?infoNum=' + infoNum

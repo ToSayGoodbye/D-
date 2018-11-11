@@ -3,7 +3,7 @@
 
   <view class="list">
       <import src="../template/orderList.wxml"/>
-      <template is="orderList" data="{{orderList:orderList}}"/>
+      <template is="orderList" data="{{orderList:orderList,oilId:oilId}}"/>
   </view>
   
   <view wx:if="{{hasMore}}" >
