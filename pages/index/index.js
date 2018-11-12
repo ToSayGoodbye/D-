@@ -138,6 +138,9 @@ Page({
     if (app.globalData.fresh == 0) {
       app.globalData.fresh = 1;
       console.log('重新onload');
+      this.setData({
+        page: 1
+      })
       this.onLoad();
     }
     console.log('加载show');
