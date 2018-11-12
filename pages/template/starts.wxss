@@ -1,14 +1,12 @@
 .rankcontauber{
 display: flex;
 flex-direction: row;
-align-items:flex-start;
+align-items:center;
 }
 .rankstars{
 display: flex;
 flex-direction: row;
-height: 25rpx;
 margin-right: 6rpx;
-margin-top: 12rpx;
 }
 .rankstars image{
 padding-left: 3rpx;
@@ -17,6 +15,5 @@ width: 36rpx;
 }
 .rankscore{
 color: #4A6141;
-line-height:58rpx;
 padding-left:3rpx
 }

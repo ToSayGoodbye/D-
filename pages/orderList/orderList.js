@@ -19,24 +19,24 @@ Page({
   bindViewTap: function () {
     console.log(app.globalData.userInfo)
   },
+  onPullDownRefresh: function () {
+    var that = this;
+    that.setData({
+      page: 1
+    })
+    that.getData();
+    wx.stopPullDownRefresh();
+  },
   onLoad: function (options) {
     var that = this;
     var oilId = options.id;
     if (typeof (oilId) == 'undefined') {
       oilId = 'undefined';
     }
-    //获取位置
-    wx.getLocation({
-      success: function (e) {
-        that.setData({
-          latitude: e.latitude,
-          longitude: e.longitude,
-          oilId: oilId
-        });
-        that.getData();
-      }
-    })
-
+    that.setData({
+      oilId: oilId
+    });
+    that.getData();
   },
   //查询列表
   getData: function () {
@@ -44,7 +44,6 @@ Page({
 
     if (that.data.page == 1) {
       that.setData({
-        orderList: [],
         hidden: false,
         hasMore: true
       });
@@ -66,8 +65,15 @@ Page({
         more = false;
       }
 
+      var resultList = [];
+      if (that.data.page == 2) {
+        resultList = list;
+      } else {
+        resultList = that.data.oilList.concat(list);
+      }
+
       that.setData({
-        orderList: that.data.orderList.concat(list),
+        orderList: resultList,
         hasMore: more,
         hidden: true,
         querying: false

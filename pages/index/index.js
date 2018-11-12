@@ -118,7 +118,7 @@ Page({
     that.setData({
       page:1
     })
-    that.getData();
+    that.onLoad();
     wx.stopPullDownRefresh();
   },
   onLoad: function () {

@@ -2,7 +2,7 @@
 <import src="../template/starts.wxml"/>
 <wxs src="../../resources/tools/tool.wxs" module="tool" />
 <view class="tupian">
-  <image src="https://www.wangjicheng.xyz/img/laiwang.png"></image>
+  <image src="{{oil.imgUrl}}"></image>
 </view>
 <view class="container">
     <view class="oilTitle">

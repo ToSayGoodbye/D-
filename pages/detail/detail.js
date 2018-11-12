@@ -89,8 +89,11 @@ Page({
     var doudingPrice = Number(oil.price - oil.savePrice).toFixed(2);
     var marketSavePrice = Number(oil.marketPrice - doudingPrice).toFixed(2);
     var that =this;
+
+    var imgUrl = 'https://www.wangjicheng.xyz/' +oil.imgUrl;
+    oil.imgUrl = imgUrl;
     oil.shoots = shoots;
-    console.log(oil);
+
     this.setData({
       oil: oil,
       doudingPrice: doudingPrice,
