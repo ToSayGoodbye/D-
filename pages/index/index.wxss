@@ -145,7 +145,7 @@ padding-bottom:0rpx
   overflow: auto;
 }
 .listItme{
-  height: 162rpx;
+  height: 160rpx;
   width: 100%;
   background-color: #fff;
   margin-top: 15rpx;

@@ -44,7 +44,7 @@
 
    <cover-view  wx:if="{{clicked}}" class="listMap">
             <cover-view class="allItem2">
-                <cover-view bindtap="toDetail" data-oil="{{item}}" class="listItme flex-row" style="display: flex;width:90%;height:140rpx;">
+                <cover-view bindtap="toDetail" data-oil="{{item}}" class="listItme flex-row" style="display: flex;width:90%;height:142rpx;">
                 <cover-view>
                     <cover-image src="../../resources/images/jiayou.png"></cover-image>
                 </cover-view>
@@ -55,7 +55,8 @@
                         <cover-view class="yuexiao2" style="text-align:center">已售{{item.order_count}}单</cover-view>
                     </cover-view>
                     <cover-view class="flex-view-item address">{{item.address}}</cover-view>
-                    <cover-view class="flex-view-item price">￥{{tool.getPrice(item)}}</cover-view>
+                    <cover-view class="flex-view-item price">￥{{tool.getPrice(item)}}
+                    <span class="jiangjia">已降价{{tool.getJiang(item)}}</span></cover-view>
                   </cover-view>
                 </cover-view>
 

@@ -31,14 +31,14 @@
       {
         "text": "首页",
         "pagePath": "pages/index/index",
-        "iconPath": "resources/images/home.png",
-        "selectedIconPath": "resources/images/home_selected.png"
+        "iconPath": "resources/images/shouye.png",
+        "selectedIconPath": "resources/images/shouye_selected.png"
       },
       {
         "text": "我的",
         "pagePath": "pages/user/user",
-        "iconPath": "resources/images/me.png",
-        "selectedIconPath": "resources/images/me_selected.png"
+        "iconPath": "resources/images/wode.png",
+        "selectedIconPath": "resources/images/wode_selected.png"
       }
     ]
   }

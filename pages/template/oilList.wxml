@@ -15,7 +15,7 @@
         <view class="flex-view-item address">{{item.address}}</view>
         <view class="flex-view-item price">
           ￥{{tool.getPrice(item)}}
-          <span class="jiangjia">已降价{{item.savePrice}}</span>
+          <span class="jiangjia">已降价{{tool.getJiang(item)}}</span>
         </view>
       </view>
     </view>
