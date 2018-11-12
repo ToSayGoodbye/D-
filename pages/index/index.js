@@ -133,7 +133,18 @@ Page({
         that.getData();
       }
     })
-
+  },
+  onShow:function(){
+    if (app.globalData.fresh == 0) {
+      app.globalData.fresh = 1;
+      console.log('重新onload');
+      this.onLoad();
+    }
+    console.log('加载show');
+  },
+  onHide:function(){
+    app.globalData.fresh -= 1;
+    console.log('加载hide');
   },
   //查询列表
   getData: function () {

@@ -1,5 +1,6 @@
 // pages/detail/detail.js
 var util = require('../../utils/util.js');
+var app = getApp();
 
 var navList = [];
 
@@ -84,6 +85,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+
+    app.globalData.fresh += 1;
+
     var oil = JSON.parse(options.oil);
     var shoots = oil.shoots.split(',');
     var doudingPrice = Number(oil.price - oil.savePrice).toFixed(2);

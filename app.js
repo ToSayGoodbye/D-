@@ -42,6 +42,7 @@ App({
     userInfo: null,
     cookieid:"",
     phone:"",
+    fresh:1,
     //requestUrl: 'http://localhost:8080/Douding'
     requestUrl:'https://www.wangjicheng.xyz/Douding'
   }
