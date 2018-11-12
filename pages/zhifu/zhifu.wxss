@@ -56,7 +56,7 @@ page {
         font-weight: bold;
         width: 300rpx;
         position: relative;
-        top: 34rpx;
+        top: 23rpx;
 }
 
 .shoots {
