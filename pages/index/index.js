@@ -149,6 +149,13 @@ Page({
     app.globalData.fresh -= 1;
     console.log('加载hide');
   },
+  //分享
+  onShareAppMessage(e) {
+    return {
+      title: "豆丁加油，加油省省省！",
+      path: 'pages/home/home' // 路径，传递参数到指定页面。
+    }
+  },
   //查询列表
   getData: function () {
     var that = this;

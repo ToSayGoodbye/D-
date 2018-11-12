@@ -15,6 +15,9 @@ Page({
         infoNum: infoNum
       })
     },
+    onShow:function(){
+      app.globalData.fresh += 1;
+    },
   logout:function(){
     wx.showModal({
       title: '豆丁加油',
