@@ -10,7 +10,7 @@ page{
 }
 .xiaoliang{
   font-size:26rpx;
-color:#888;
+color:#666;
 margin-left:16rpx;
 
 }
@@ -26,7 +26,7 @@ margin-left:16rpx;
 .type{
   font-size:35rpx;
   text-align:center;
-  color:#888;
+  color:#666;
   margin-top:-17rpx;
   padding:7rpx;
 }
@@ -36,6 +36,7 @@ margin-left:16rpx;
 }
 .titT{
   font-size:30rpx;
+  color: #333;
 }
 .titD{
   font-size:30rpx;
@@ -73,7 +74,7 @@ margin-left:16rpx;
     text-align: center;
     padding-top:13px;
     font-weight:bold;
-    color:#888;
+    color:#666;
 }
 .sort-item.on{
     color: rgb(248, 125, 24);
@@ -95,18 +96,19 @@ margin-left:16rpx;
   border-radius:50%;
   background:rgb(77, 107, 255);
   position:relative;
-  right:10rpx;
+  right:7rpx;
   top:3rpx;
 }
 .juli{
   font-size:30rpx;
+  color: #666;
 }
 .daohang image{
-	width:49rpx;
-  height:49rpx;
+  width:47rpx;
+  height:47rpx;
   position:relative;
-  left:23rpx;
-  top:9rpx;
+  left:19rpx;
+  top:10rpx;
 }
 .daohang2{
   width:78rpx;
@@ -121,14 +123,14 @@ margin-left:16rpx;
 
 }
 .daohang2 cover-image{
-	width:37rpx;
+  width:37rpx;
   height:37rpx;
   position:relative;
   left:18rpx;
   top:9rpx;
 }
 .daohang2 cover-view{	
-	font-size:20rpx;
+  font-size:20rpx;
   color:#fff;
   position:relative;
   left:19rpx;
@@ -138,12 +140,13 @@ margin-left:16rpx;
   font-size:19rpx;
   color:rgb(236, 232, 232);
   position:relative;
-  left:-12px;
-  top:27rpx;
+  left:-11px;
+  top:28rpx;
+
 }
 .shootOn{
-  background-color:rgb(248, 125, 24);
-  color:#fff
+  border-color:rgb(248, 125, 24);
+  color:rgb(248, 125, 24)
 }
 .sort-panel{
     width:100%;
@@ -188,7 +191,7 @@ margin-left:16rpx;
 .address{
   font-size:29rpx;
   margin-top:16rpx;
-  color:#888;
+  color:#666;
 }
 .container {
     width: 100%;                                                                            background: #efefef;
