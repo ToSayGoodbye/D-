@@ -62,10 +62,14 @@ Page({
     }
     var infoNum = that.data.infoNum;
     var openid = that.data.openid;
-    var phone = wx.getStorageSync('doudingcoo1kieid');
-    var url = '/wxPaySome?infoNum=' + infoNum + '&openid=' + openid
-      + '&jine=' + jine + '&phone=' + phone;
-    util.req(url, null, function (res) {
+    var phone = wx.getStorageSync('doudingphone');
+    var url = '/wxPaySome';
+    util.reqp(url, {
+      infoNum: infoNum,
+      openid: openid,
+      jine: jine,
+      phone: phone
+    }, function (res) {
      if(res.data.code == 0){
        wx.showToast({
          title: '申请提现成功',
@@ -75,6 +79,13 @@ Page({
        wx.redirectTo({
          url: '../chenggong/chenggong'
        }) 
+     }else{
+       var errorMsg = res.data.msg;
+       wx.showToast({
+         title: errorMsg,
+         icon: 'none',
+         duration: 800
+       })
      }
     })
   },

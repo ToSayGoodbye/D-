@@ -33,7 +33,7 @@ function reqp(url, data, callback) {
     url: rootDocment + url,
     data: data,
     method: 'POST',    //大写
-    header: { 'Content-Type': 'application/json' },
+    header: { 'Content-Type': 'application/x-www-form-urlencoded' },
     success(res) {
       callback(res)
     }

@@ -10,6 +10,9 @@ page{
     background-color: #efefef;
     align-items:ab;
 }
+.shootNum{
+  font-size: 24rpx
+}
 .listItme{
   height:75rpx;
   background-color:#fff;

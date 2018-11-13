@@ -25,4 +25,10 @@ var getJiang = function (oil) {
   var price = (oil.marketPrice - getPrice(oil)).toFixed(2);
   return price;
 }
-module.exports = { getType: getType, getPrice: getPrice, getJiang: getJiang};
+var getAllPrice = function (item) {
+  var real_price = item.real_price;
+  var save_price = item.save_price;
+  var price = ((parseFloat(real_price) + parseFloat(save_price)) / 100).toFixed(2);
+  return price;
+}
+module.exports = { getType: getType, getPrice: getPrice, getJiang: getJiang, getAllPrice: getAllPrice};

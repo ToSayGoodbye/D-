@@ -1,4 +1,5 @@
 <!-- orderList.wxml -->
+<wxs src="../../resources/tools/tool.wxs" module="tool" />
 <template name="orderItem">
   <view class="listItme flex-row" style="display: flex;">
       <view class="flex-view-item" style="display: block;">
@@ -6,12 +7,15 @@
       </view>
       <view class="flex-row flex-view-item" style="display: block;margin-left:-45rpx;">
         <view wx:if="{{oilId=='undefined'}}" class="flex-view-item">{{item.name}}</view>
-        <view wx:else class="flex-view-item phone">{{item.phone}}</view>
+        <view wx:else class="flex-view-item phone">
+          {{item.phone}}
+          <span class="shootNum">({{tool.getType(item.type)}}-{{item.shootNum}})</span>
+        </view>
         <view class="flex-view-item">{{item.time_end}}</view>
       </view>
       
       <view class="flex-view-item itmeView" style="display: block;">
-        <view class="flex-view-item itmePrice">￥{{item.real_price}}</view>
+        <view class="flex-view-item itmePrice">￥{{tool.getAllPrice(item)}}</view>
       </view>
   </view>
   <view class="lline"></view>
