@@ -152,7 +152,7 @@ Page({
   //分享
   onShareAppMessage(e) {
     return {
-      title: "豆丁加油，加油省省省！",
+      title: "豆丁加油，加油省不停",
       path: 'pages/home/home' // 路径，传递参数到指定页面。
     }
   },
