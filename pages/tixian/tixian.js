@@ -84,7 +84,7 @@ Page({
        wx.showToast({
          title: errorMsg,
          icon: 'none',
-         duration: 800
+         duration: 1000
        })
      }
     })

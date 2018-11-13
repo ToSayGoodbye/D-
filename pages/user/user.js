@@ -36,6 +36,8 @@ Page({
         if (e.confirm){
           var cookieid = wx.getStorageSync('doudingcoo1kieid');
           wx.clearStorageSync('doudingcoo1kieid');
+          wx.clearStorageSync('doudingphone');
+          wx.clearStorageSync('doudinginfoNum');
           var url = "/logout"
           util.req(url, { uuid: cookieid }, function (res) { })
           wx.reLaunch({
