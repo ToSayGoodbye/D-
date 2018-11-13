@@ -10,6 +10,13 @@ Page({
     phone:"",
     show:false
   },
+  //分享
+  onShareAppMessage(e) {
+    return {
+      title: "豆丁加油，加油省不停",
+      path: 'pages/home/home' // 路径，传递参数到指定页面。
+    }
+  },
 
   /**
    * 生命周期函数--监听页面加载
