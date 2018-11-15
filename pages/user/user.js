@@ -4,15 +4,18 @@ Page({
     data:{
         userInfo:{},
         phone:"",
-        infoNum:'0'
+        infoNum:'0',
+        isHost:'0'
     },
     onLoad:function(){
         var that = this;
       var phone = wx.getStorageSync('doudingphone');
       var infoNum = wx.getStorageSync('doudinginfoNum');
+      var isHost = wx.getStorageSync('doudingisHost');
       that.setData({
         phone: phone,
-        infoNum: infoNum
+        infoNum: infoNum,
+        isHost: isHost
       })
     },
     onShow:function(){
@@ -38,6 +41,7 @@ Page({
           wx.clearStorageSync('doudingcoo1kieid');
           wx.clearStorageSync('doudingphone');
           wx.clearStorageSync('doudinginfoNum');
+          wx.clearStorageSync('doudingisHost');
           var url = "/logout"
           util.req(url, { uuid: cookieid }, function (res) { })
           wx.reLaunch({

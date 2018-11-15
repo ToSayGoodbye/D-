@@ -9,7 +9,7 @@
               私家车车主
           </view>
     </view>
-    <navigator wx:if="{{infoNum!=0}}"  class="menu" url="../qianbao/qianbao?id={{infoNum}}">
+    <navigator wx:if="{{isHost!=0}}"  class="menu" url="../qianbao/qianbao?id={{infoNum}}">
         <image class="navImage" src="../../resources/images/qianbao.png"/>
         <text>我的钱包</text>
     </navigator>

@@ -93,10 +93,13 @@ Page({
         wx.setStorageSync('doudingphone', phone);
         wx.setStorageSync('doudingcoo1kieid', res.data.data.uuid);
         var infoNum = 0;
+        var isHost = 0;
         if (null != res.data.data.oil){
           infoNum = res.data.data.oil.infoNum;
+          isHost = res.data.data.oil.isHost;
         }
         wx.setStorageSync('doudinginfoNum', infoNum);
+        wx.setStorageSync('doudingisHost', isHost);
         wx.reLaunch({
           url: '../index/index'
         })
