@@ -10,7 +10,7 @@
           约{{num}}L
     </view>
   </view>
-  <view class="line"></view>
+ 
    <view class="flex-row shoots" style="display: flex;">
     <view catchtap="onTapPrice" data-index="0"  data-price="100" class="flex-view-item shoot {{0 == activePriceIndex ? 'shootOn' : ''}}">
     100元
