@@ -12,14 +12,13 @@ page {
         overflow: hidden;
 }
 .inpu {
-        padding: 20rpx;
-        background: #fff;
+        padding:20rpx;
+        background:#fff;
+        border-bottom:1rpx solid #888;
+        padding-bottom: 0;
 }
 
-.line {
-        height: 1px;
-        background-color: #8888;
-}
+
 
 .jinequ {
         margin-top: 5rpx;
@@ -60,10 +59,12 @@ page {
         font-size: 46rpx;
         font-weight: bold;
         width: 80%;
-        position: relative;
-        top: 23rpx;
+        
 }
-
+.price input{
+        
+        padding-top:4%;
+}
 .shoots {
         width: 100%;
         justify-content: space-around;
@@ -94,8 +95,8 @@ page {
 
 }
 .shootOn{
-    color: #ee6b2b;
-    border: 1px solid #ee6b2b;
+        color: #ee6b2b;
+        border: 1px solid #ee6b2b;
 }
 .biaozhi {
         font-size: 40rpx;

@@ -91,13 +91,10 @@ margin-left:16rpx;
 .daohang{
   width:88rpx;
   height:88rpx;
-  margin-top:1.5%;
-  margin-right:3%;
   border-radius:50%;
   background:rgb(77, 107, 255);
-  position:relative;
-  right:7rpx;
-  top:3rpx;
+  margin:0 auto;
+
 }
 .juli{
   font-size:30rpx;
