@@ -67,6 +67,8 @@ Page({
 
       var oil = res.data.data;
       var shoots = oil.shoots.split(',');
+      var imgUrl = 'https://www.wangjicheng.xyz/' + oil.imgUrl;
+      oil.imgUrl = imgUrl;
       oil.distance = distance;
       oil.shoots = shoots;
 

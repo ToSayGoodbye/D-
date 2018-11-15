@@ -20,8 +20,9 @@ Page({
   xiugai:function(e){
     var id = e.detail.target.dataset.id;
     var price = e.detail.value.price;
+    var saveprice = e.detail.value.sprice;
 
-    var url = '/updatePrice?id=' +id + '&price=' + price
+    var url = '/updatePrice?id=' +id + '&price=' + price+'&saveprice='+saveprice
 
     util.req(url, null, function (res) {
       if(res.data.code==0){
@@ -33,12 +34,7 @@ Page({
       }
     })
   },
-  /**
-   * 监控价格修改
-   */
-  ifChange:function(e){
-    console.log(e);
-  },
+
   onLoad: function (options) {
     var that = this;
 

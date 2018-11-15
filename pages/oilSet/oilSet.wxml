@@ -24,6 +24,13 @@
             <view class="weui-cell__bd">
              <view class="page-section">
                 <view class="weui-cells weui-cells_after-title">
+                     <view class="weui-input">优惠金额</view>
+                </view>
+              </view>
+            </view>
+            <view class="weui-cell__bd">
+             <view class="page-section">
+                <view class="weui-cells weui-cells_after-title">
                     <view class="weui-input">操作</view>
                 </view>
               </view>
@@ -38,12 +45,19 @@
         <view class="weui-cells weui-cells_after-title">
           <view class="weui-cell weui-cell_input">
             <view class="weui-cell__hd">
-              <view class="weui-label">{{item.type}}</view>
+              <view class="weui-label youhao">{{item.type}}</view>
             </view>
             <view class="weui-cell__bd">
              <view class="page-section">
                 <view class="weui-cells weui-cells_after-title">
-                      <input name="price" class="weui-input"  value="{{item.price}}" data-value="{{this.detail.value}}" data-price="{{item.price}}" bindinput="ifChange" type="digit" placeholder="请输入价格"/>
+                      <input name="price" class="weui-input"  value="{{item.price}}" data-value="{{this.detail.value}}" data-price="{{item.price}}" type="digit" placeholder="请输入价格"/>
+                </view>
+              </view>
+            </view>
+            <view class="weui-cell__bd">
+             <view class="page-section">
+                <view class="weui-cells weui-cells_after-title">
+                      <input name="sprice" class="weui-input"  value="{{item.savePrice}}" data-value="{{this.detail.value}}" data-price="{{item.savePrice}}" type="digit" placeholder="请输入价格"/>
                 </view>
               </view>
             </view>

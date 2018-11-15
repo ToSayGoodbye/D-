@@ -15,6 +15,11 @@
   height: 2rpx;
   background-color: #D8D8D8;
 }
+.youhao{
+  font-size:29rpx;
+  color:#888;
+  font-weight:bold;
+}
 .page-head-desc{
   padding-top: 20rpx;
   color: #9B9B9B;
