@@ -4,7 +4,8 @@
     <icon class="icon-box-img" type="success" size="93"></icon>
     <view class="icon-box-ctn">
       <view class="icon-box-title">成功</view>
-      <view class="icon-box-desc">提现申请已提交</view>
+      <view wx:if="{{tab!=1}}" class="icon-box-desc">提现申请已提交</view>
+      <view wx:else class="icon-box-desc">反馈成功</view>
     </view>
   </view>
 </view>

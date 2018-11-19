@@ -1,6 +1,7 @@
 /* pages/tixian/tixian.wxss */
 .inpu{
-  padding:20rpx
+  padding:20rpx;
+  padding-bottom:2rpx;
 }
 .line{
   height:1px;

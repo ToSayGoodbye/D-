@@ -1,11 +1,16 @@
 <!--pages/help/help.wxml-->
 <view class="container">
-  <map id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="12" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" show-location style="width: 100%; height: 100vh;">
-  </map>
-
-  <view  wx:if="{{clicked}}" class="list">
-    <import src="../template/oilList.wxml"/>
-    <template is="oilList" data="{{oilList:oilList}}"/>
+<view class="shang">
+  <view class="flex-row topView" style="display: flex;justify-content:space-around">
+    <view class="flex-view-item">加油次数(次)</view>
+    <view class="flex-view-item">累计节省(元)</view>
   </view>
-
+  <view class="flex-row bottomView" style="display: flex;justify-content:space-around">
+    <view class="flex-view-item">8</view>
+    <view class="flex-view-item">150</view>
+  </view>
+</view>
+<view class="xia">
+  <button type='default'>一键加油</button>
+</view>
 </view>

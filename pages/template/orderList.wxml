@@ -5,7 +5,7 @@
       <view class="flex-view-item" style="display: block;">
         <image class="imgView" src="/resources/images/orderw.png"></image>
       </view>
-      <view class="flex-row flex-view-item" style="display: block;margin-left:-45rpx;">
+      <view class="flex-row flex-view-item" style="display: block;margin-left:-13rpx;">
         <view wx:if="{{oilId=='undefined'}}" class="flex-view-item">
         {{item.name}}
         <span class="shootNum">({{tool.getType(item.type)}})</span>
@@ -18,9 +18,10 @@
       </view>
       
       <view class="flex-view-item itmeView" style="display: block;">
-        <view wx:if="{{oilId=='undefined'}}" class="flex-view-item itmePrice">￥{{item.real_price/100}}</view>
-        <view wx:else class="flex-view-item itmePrice">￥{{tool.getAllPrice(item)}}</view>
-        
+        <view wx:if="{{oilId=='undefined'}}" class="flex-view-item">实付:￥{{item.real_price/100}}</view>
+        <view wx:else class="flex-view-item itmePrice">金额:￥{{tool.getAllPrice(item)}}</view>
+        <view wx:if="{{oilId!='undefined'}}" class="flex-view-item realView">到账:￥{{item.real_price/100}}</view>
+         <view wx:if="{{oilId=='undefined'}}" class="flex-view-item realView">优惠:￥{{item.save_price}}</view>
       </view>
   </view>
   <view class="lline"></view>

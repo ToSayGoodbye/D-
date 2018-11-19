@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/home/home",
+    "pages/help/help",
     "pages/chenggong/chenggong",
     "pages/tixian/tixian",
     "pages/oilSet/oilSet",
@@ -8,13 +9,13 @@
     "pages/code/code",
     "pages/user/user",
     "pages/logs/logs",
-    "pages/help/help",
     "pages/orderList/orderList",
     "pages/detail/detail",
     "pages/qianbao/qianbao",
     "pages/zhifu/zhifu",
     "pages/success/success",
-    "pages/youhuiquan/youhuiquan"
+    "pages/youhuiquan/youhuiquan",
+    "pages/fankui/fankui"
   ],
   "window": {
     "backgroundTextStyle": "dark",

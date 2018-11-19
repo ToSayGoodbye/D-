@@ -1,0 +1,15 @@
+<!--pages/fankui/fankui.wxml-->
+<view class="minpadding">
+  <view class="page-head">
+    <view class="page-head-title">意见反馈</view>
+    <view class="page-head-line"></view>
+  </view>
+  <form bindsubmit="formSubmit" bindreset="formReset">
+  <view class="textView">
+    <textarea name="content" class="weui-textarea fankui" placeholder="感谢您使用豆丁加油，您的宝贵意见或建议将帮助我们不断改进。" maxlength='255' />
+  </view>
+    <view class="txbtn">
+    <button formType="submit" style="background-color: rgb(248, 125, 24);" type="primary">提交</button>
+  </view>
+  </form>
+</view>

@@ -1,27 +1,45 @@
-// pages/chenggong/chenggong.js
+// pages/fankui/fankui.js
+var util = require('../../utils/util.js');
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    tab:""
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+
+  },
+  //提交保存
+  formSubmit: function (e) {
+
     var that = this;
-    that.setData({
-      tab:options.tab
+    let { content } = e.detail.value;
+    console.log(content);
+    var phone = wx.getStorageSync("doudingphone");
+    if(content == ""){
+      wx.showToast({
+        title: '请您填写意见后再提交!',
+        icon: 'none',
+        duration: 1000
+      })
+      return
+    }
+    var url = "/addMessage?content="+content+"&phone="+phone
+    util.req(url, null, function (res) {
+      if (res.data.code == 0) {
+        wx.redirectTo({
+          url: '../chenggong/chenggong?tab=1'
+        })
+      }
     })
   },
-  queding:function(){
-    wx.reLaunch({
-      url: '../index/index'
-    })
-  },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

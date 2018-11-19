@@ -22,9 +22,10 @@ page{
   font-size:30rpx;
 
 }
-.itmePrice{
-  line-height:79rpx;
+.realView{
+  color:rgb(248, 125, 24);
 }
+
 .imgView{
   width:67rpx;
   height: 67rpx
@@ -33,7 +34,7 @@ page{
   padding-bottom:5rpx;
 }
 .itmeView{
-  width:121rpx;
+  width:203rpx;
 }
 .lline {
         height: 1px;
@@ -47,7 +48,4 @@ page{
 .list{
   width:100%;
   margin-top:10rpx;
-}
-.name{
-
 }

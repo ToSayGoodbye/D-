@@ -25,6 +25,7 @@ Page({
   onShareAppMessage(e) {
     return {
       title: "豆丁加油，加油省不停",
+      imageUrl: "/resources/images/zhuanfa.png",
       path: 'pages/home/home' // 路径，传递参数到指定页面。
     }
   },

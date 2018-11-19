@@ -1,4 +1,7 @@
 /* pages/help/help.wxss */
+
+
+
 .list{
   position:absolute;
   bottom:0rpx;
@@ -77,9 +80,39 @@
 } 
 .container {
     width: 100%;
-    padding:0;
     margin: 0;
-    background-color: #fff;
+    background-color: rgb(247, 143, 58);
+    height:558rpx;
+padding:66rpx;
+
+}
+.shang{
+background-color:#fff;
+width:543rpx;
+border-radius:45rpx;
+padding:39rpx;
+}
+.xia{
+  margin-top:78rpx;
+
+}
+.topView{
+  font-size:30rpx;
+
+}
+.xia button{
+ border-radius:51rpx;
+height:80rpx;
+font-size:38rpx;
+font-weight:bold;
+}
+.bottomView{
+display:flex;
+justify-content:space-around;
+padding-top:16rpx;
+font-weight:bold;
+font-size:63rpx;
+
 }
 .noMore{
   text-align: center;

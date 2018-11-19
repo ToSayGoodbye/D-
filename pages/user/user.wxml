@@ -29,6 +29,10 @@
          <image class="navImage" src="../../resources/images/quan.png"/>
         <text>我的优惠券</text>
     </navigator>
+    <navigator class="menu" url="../fankui/fankui">
+         <image class="navImage" src="../../resources/images/fankui.png"/>
+        <text>意见反馈</text>
+    </navigator>
     <navigator class="menu" bindtap='logout' url="../mycontent/mycontent?tab=0">
          <image class="navImage" src="../../resources/images/out.png"/>
         <text>退出登录</text>
