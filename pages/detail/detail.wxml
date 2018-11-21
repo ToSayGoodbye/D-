@@ -49,7 +49,7 @@
         <template is="nav" data="{{ navList, activeIndex }}"/> -->
     <view class="sort-panel">
       <block wx:for="{{navList}}" wx:key="">
-        <view id="{{item.type}}" data-index="{{index}}"
+        <view id="{{item.type}}" data-index="{{index}}" data-type="{{item.type}}"
               class="sort-item {{index == activeIndex ? 'comb on' : ''}}"
               catchtap="onTapTag">{{tool.getType(item.type+'')}}</view>
       </block>

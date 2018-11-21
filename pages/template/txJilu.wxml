@@ -1,0 +1,28 @@
+<!-- orderList.wxml -->
+<wxs src="../../resources/tools/tool.wxs" module="tool" />
+<template name="orderItem">
+  <view class="listItme flex-row" style="display: flex;">
+      <view class="flex-view-item" style="display: block;">
+        <image class="imgView" src="/resources/images/orderw.png"></image>
+      </view>
+      <view class="flex-row flex-view-item" style="display: block;margin-left:-74rpx;">
+        <view class="flex-view-item">
+        {{item.phone}}
+        </view>
+        <view class="flex-view-item phone">
+          {{item.insertTime}}
+        </view>
+      </view>
+      
+      <view class="tx">
+        ￥{{item.price}}
+      </view>
+  </view>
+  <view class="lline"></view>
+</template>
+
+<template name="orderList">
+    <block wx:for="{{orderList}}">
+        <template is="orderItem" data="{{index:index,item:item,oilId:oilId}}"/>
+    </block>
+</template>

@@ -15,7 +15,8 @@
     "pages/zhifu/zhifu",
     "pages/success/success",
     "pages/youhuiquan/youhuiquan",
-    "pages/fankui/fankui"
+    "pages/fankui/fankui",
+    "pages/txJilu/txJilu"
   ],
   "window": {
     "backgroundTextStyle": "dark",

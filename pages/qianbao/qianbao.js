@@ -48,7 +48,14 @@ Page({
         '&balance=' + this.data.balance
     })
   },
-
+  /**
+   * 提现记录
+   */
+  toJilu:function(){
+    wx.navigateTo({
+      url: '../txJilu/txJilu?infoNum=' + this.data.infoNum
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

@@ -49,12 +49,13 @@ Page({
     var that = this;
     var tab = e.currentTarget.id;
     var index = e.currentTarget.dataset.index;
+    var type = e.currentTarget.dataset.type;
     that.setData({
       activeIndex: index,
       tab: tab,
       activeShootIndex: -1
     });
-    var url = '/selectOilById?infoNum=' + that.data.oil.infoNum + '&type=' + index
+    var url = '/selectOilById?infoNum=' + that.data.oil.infoNum + '&type=' + type
     util.req(url, null, function (res) {
       var distance = that.data.oil.distance;//复用距离
 
@@ -65,8 +66,13 @@ Page({
       oil.distance = distance;
       oil.shoots = shoots;
 
+      var doudingPrice = Number(oil.price - oil.savePrice).toFixed(2);
+      var marketSavePrice = Number(oil.marketPrice - doudingPrice).toFixed(2);
+
       that.setData({
-        oil: oil
+        oil: oil,
+        doudingPrice: doudingPrice,
+        marketSavePrice: marketSavePrice
       });
     })
   },

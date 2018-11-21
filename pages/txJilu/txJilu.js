@@ -13,7 +13,7 @@ Page({
     order: 1,
     querying: false,
 
-    oilId:""
+    oilId: ""
   },
   //事件处理函数
   bindViewTap: function () {
@@ -29,10 +29,7 @@ Page({
   },
   onLoad: function (options) {
     var that = this;
-    var oilId = options.id;
-    if (typeof (oilId) == 'undefined') {
-      oilId = 'undefined';
-    }
+    var oilId = options.infoNum;
     that.setData({
       oilId: oilId
     });
@@ -52,11 +49,9 @@ Page({
 
     var page = that.data.page++;
     var phone = wx.getStorageSync('doudingphone');
-    var url = '/queryOrderList?page=' + (page++) + '&pagesize=' + (that.data.pagesize) + 
-    '&phone='+phone;
-    if(that.data.oilId!='0'){
-      url = url + '&id=' + that.data.oilId;
-    }
+    var url = '/queryJilu?page=' + (page++) + '&pageSize=' + (that.data.pagesize) +
+      '&infoNum=' + that.data.oilId;
+    
     util.req(url, null, function (res) {
       var list = res.data.data;
       var length = list.length;

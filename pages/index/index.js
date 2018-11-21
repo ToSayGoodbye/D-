@@ -152,7 +152,7 @@ Page({
   //分享
   onShareAppMessage(e) {
     return {
-      title: "豆丁加油，加油省不停",
+      title: "豆丁加油，就是省钱。使用豆丁加油最低八折起！",
       imageUrl: "/resources/images/zhuanfa.png",
       path: 'pages/home/home' // 路径，传递参数到指定页面。
     }

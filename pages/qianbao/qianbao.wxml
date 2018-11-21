@@ -4,6 +4,10 @@
     账户余额(元)
     <view class="qian">{{balance}}</view>
   </view>
+  <navigator  class="menu" bindtap='toJilu'>
+        <image class="navImage" src="../../resources/images/order.png"/>
+        <text>提现记录</text>
+    </navigator>
   <navigator  class="menu" bindtap='toTixian'>
         <image class="navImage" src="../../resources/images/tixian.png"/>
         <text>提现</text>

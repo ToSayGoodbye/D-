@@ -1,0 +1,58 @@
+/* pages/orderList/orderList.wxss */
+
+page{
+  background-color: #efefef;
+}
+.container {
+    width: 100%;
+    padding:0;
+    margin: 0;
+    background-color: #efefef;
+    align-items:ab;
+}
+.shootNum{
+  font-size: 24rpx
+}
+.tx{
+  position:relative;
+  top:17rpx;
+  color:rgb(248, 125, 24);
+  width:68rpx;
+  text-align:right;
+}
+.listItme{
+  height:75rpx;
+  background-color:#fff;
+  padding:18rpx;
+  color:#888;
+  justify-content:space-around;
+  font-size:30rpx;
+
+}
+.realView{
+  color:rgb(248, 125, 24);
+}
+
+.imgView{
+  width:67rpx;
+  height: 67rpx
+}
+.phone{
+  padding-bottom:5rpx;
+}
+.itmeView{
+  width:203rpx;
+}
+.lline {
+        height: 1px;
+        background-color: #8888;
+}
+.noMore{
+  text-align: center;
+  font-size: 26rpx;
+  color:#888;
+}
+.list{
+  width:100%;
+  margin-top:10rpx;
+}
