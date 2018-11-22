@@ -31,4 +31,10 @@ var getAllPrice = function (item) {
   var price = ((parseFloat(real_price) + parseFloat(save_price*100)) / 100).toFixed(2);
   return price;
 }
-module.exports = { getType: getType, getPrice: getPrice, getJiang: getJiang, getAllPrice: getAllPrice};
+var getLine = function (order) {
+  var phone = order.phone;
+  var line = "车主" + phone.substring(0, 3) + "***" + phone.substring(7,11)
+    + " 消费" + order.real_price / 100 + "元 节省" + order.save_price + "元";
+  return line;
+}
+module.exports = { getType: getType, getPrice: getPrice, getJiang: getJiang, getAllPrice: getAllPrice, getLine: getLine};

@@ -5,7 +5,7 @@
       <view class="flex-view-item" style="display: block;">
         <image class="imgView" src="/resources/images/orderw.png"></image>
       </view>
-      <view class="flex-row flex-view-item" style="display: block;margin-left:-13rpx;">
+      <view class="flex-row flex-view-item" style="display: block;margin-left:14rpx;width:412rpx;">
         <view wx:if="{{oilId=='undefined'}}" class="flex-view-item">
         {{item.name}}
         <span class="shootNum">({{tool.getType(item.type)}})</span>
@@ -14,7 +14,7 @@
           {{item.phone}}
           <span class="shootNum">({{tool.getType(item.type)}}-{{item.shootNum}})</span>
         </view>
-        <view class="flex-view-item">{{item.time_end}}</view>
+        <view class="flex-view-item" style="font-size: 27rpx;">{{item.time_end}}</view>
       </view>
       
       <view class="flex-view-item itmeView" style="display: block;">

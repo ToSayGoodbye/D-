@@ -32,6 +32,7 @@ page{
 }
 .phone{
   padding-bottom:5rpx;
+  font-size:27rpx;
 }
 .itmeView{
   width:203rpx;

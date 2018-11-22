@@ -5,7 +5,7 @@
       <view class="flex-view-item" style="display: block;">
         <image class="imgView" src="/resources/images/orderw.png"></image>
       </view>
-      <view class="flex-row flex-view-item" style="display: block;margin-left:-74rpx;">
+      <view class="flex-row flex-view-item cent" style="display: block;margin-left:-6rpx;">
         <view class="flex-view-item">
         {{item.phone}}
         </view>
@@ -15,7 +15,7 @@
       </view>
       
       <view class="tx">
-        ￥{{item.price}}
+        金额:<span>￥{{item.price}}</span>
       </view>
   </view>
   <view class="lline"></view>

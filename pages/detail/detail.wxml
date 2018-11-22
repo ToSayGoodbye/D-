@@ -79,6 +79,16 @@
         </block>
         </view>
   </view>
-
-    <!-- <button type="primary" bindtap='toPay'>立即支付</button> -->
+  
+  <view class="gundong flex-row" style="">
+          <span>本站订单</span><swiper style="height:49rpx" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}" vertical="{{vertical}}" interval="{{interval}}" duration="{{duration}}">
+                <block wx:for="{{fiveOrders}}" wx:key="*this">
+               
+                  <swiper-item>
+                      <view>{{tool.getLine(item)}}</view> 
+                  </swiper-item>
+              
+                </block>
+          </swiper>
+  </view>
 </view>

@@ -16,9 +16,11 @@ page{
 .tx{
   position:relative;
   top:17rpx;
-  color:rgb(248, 125, 24);
-  width:68rpx;
-  text-align:right;
+  width:183rpx;
+  text-align:left;
+}
+.tx span{
+  color:rgb(248, 125, 24)
 }
 .listItme{
   height:75rpx;
@@ -37,8 +39,13 @@ page{
   width:67rpx;
   height: 67rpx
 }
+.cent{
+  margin-left:-32rpx;
+  width:400rpx;
+}
 .phone{
   padding-bottom:5rpx;
+  font-size:27rpx;
 }
 .itmeView{
   width:203rpx;

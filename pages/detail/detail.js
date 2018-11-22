@@ -19,7 +19,18 @@ Page({
     activeShootIndex: -1,
 
     doudingPrice: '',
-    marketSavePrice: ''
+    marketSavePrice: '',
+
+    background: ['车主189***6902 消费200 节省10元', '车主186***7504 消费250 节省20元'],
+    fiveOrders:[],
+    indicatorDots: false,
+    vertical: true,
+    autoplay: true,
+    circular: true,
+    interval: 4000,
+    duration: 1000,
+    previousMargin: 0,
+    nextMargin: 0
   },
   /**
    * 根据type判断具体油型号
@@ -119,6 +130,14 @@ Page({
         navList: navList
       });
     })
+
+    var url = '/queryFiveOrder?infoNum=' + infoNum
+    util.req(url, null, function (res) {
+      var fiveOrders = res.data.data;
+      that.setData({
+        fiveOrders: fiveOrders
+      });
+    })
   },
 
   /**
@@ -132,7 +151,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    
   },
 
   /**
