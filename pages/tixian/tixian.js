@@ -60,6 +60,7 @@ Page({
       })
       return
     }
+    util.loading();
     var infoNum = that.data.infoNum;
     var openid = that.data.openid;
     var phone = wx.getStorageSync('doudingphone');
@@ -71,6 +72,7 @@ Page({
       phone: phone
     }, function (res) {
      if(res.data.code == 0){
+       util.hideLoading();
        wx.showToast({
          title: '申请提现成功',
          icon: 'success',

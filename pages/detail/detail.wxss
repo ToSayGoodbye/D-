@@ -2,7 +2,7 @@
 @import "../template/starts.wxss";
 page{
   background: #efefef;
-  /* height:100% */
+  /* height:100%  */
 }
 .tupian image{
   width:100%;
@@ -10,18 +10,18 @@ page{
 }
 .gundong{
   text-align:center;
-  padding:20rpx;
+  padding:8rpx;
   background-color:#fff;
-  height:29rpx;
+  height:36rpx;
   width:648rpx;
   border-radius:21rpx;
-  font-size:25rpx;
+  font-size:24rpx;
   position:absolute;
-  bottom:0rpx;
+  top:10rpx;
 }
 .gundong span{
   position:absolute;
-  left:85rpx;
+  left:47rpx;
   font-weight:bold;
 }
 .gundong swiper{
@@ -86,7 +86,7 @@ margin-left:16rpx;
   margin-bottom: 10rpx;
   border-radius:25rpx;
   padding:30rpx;
-  margin-top:-60rpx;
+  margin-top:-50rpx;
 }
 .sort-item{
     width:149rpx;

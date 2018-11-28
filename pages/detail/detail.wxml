@@ -81,7 +81,7 @@
   </view>
   
   <view class="gundong flex-row" style="">
-          <span>本站订单</span><swiper style="height:49rpx" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}" vertical="{{vertical}}" interval="{{interval}}" duration="{{duration}}">
+          <span>本站订单</span><swiper style="height:35rpx" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}" vertical="{{vertical}}" interval="{{interval}}" duration="{{duration}}">
                 <block wx:for="{{fiveOrders}}" wx:key="*this">
                
                   <swiper-item>
